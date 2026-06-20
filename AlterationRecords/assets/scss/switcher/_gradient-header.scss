@@ -1,0 +1,35 @@
+[data-header-style="gradient"] {
+    .app-header {
+        --header-bg:          linear-gradient(to right, #{$primary} 0%, #{$secondary} 100%);
+        --border:           rgba(255, 255, 255, 0.1) !important;
+        --primary-005:      rgba(255, 255, 255, 0.1);
+        --primary-01:       rgba(255, 255, 255, 0.1);
+        --border:         #ebebeb;
+    }
+
+    
+    .responsive-logo .main-logo .desktop-logo {
+        display: block;
+
+        &.desktop-logo-dark {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .responsive-navbar .navbar-collapse {
+            background: linear-gradient(to right, #{$primary} 0%, #{$secondary} 100%);
+        }
+    }
+
+    .app-header .nav-link.icon {
+        --color: rgba(255, 255, 255, 0.8);
+        --primary-bg-color: #ffffff;
+    }
+
+    .app-header .dropdown-item {
+        &:hover, &:focus {
+            --primary-005: #{rgba(var(--primary-rgb), 0.05)};
+        }
+    }
+}

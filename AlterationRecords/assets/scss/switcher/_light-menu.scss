@@ -1,0 +1,204 @@
+[data-menu-style="light"] {
+    .app-sidebar {
+        --menu-bg: #ffffff;
+        --white: #ffffff;
+        --border: #ebebeb;
+        --color: #3c4858;
+        --background: #f4f3f9;
+
+        .side-menu__item {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .sub-slide,
+        .is-expanded a {
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .slide-item::before,
+        .sub-side-menu__item::before,
+        .sub-slide-item2::before {
+            opacity: 0.6;
+        }
+
+        .slide-item,
+        .sub-side-menu__item,
+        .sub-slide-item2 {
+
+            &:hover,&.active,:focus {
+                color: $primary;
+            }
+        }
+
+        .slide-item {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .slide-menu {
+            li.active {
+                color: #0000;
+            }
+        }
+    }
+
+    .side-menu__item:focus {
+        color: rgb(0, 0, 0, 0.7) !important;
+    }
+
+    .app-sidebar__header {
+        background: #fff;
+    }
+
+    .side-menu__item {
+
+        &.active .side-menu__icon,
+        &:hover .side-menu__icon,
+        .side-menu__icon {
+            color: #fff;
+        }
+
+        .side-menu__icon {
+            color: rgb(0, 0, 0, 0.7);
+        }
+
+        &.active .side-menu__label,
+        &:hover .side-menu__label,
+        .side-menu__label {
+            color: $white;
+        }
+
+        .side-menu__label {
+            color: rgb(0, 0, 0, 0.7);
+        }
+
+        &.active .angle,
+        &:hover .angle,
+        .angle {
+            color: $white;
+        }
+
+        .angle {
+            color: rgb(0, 0, 0, 0.7);
+        }
+    }
+
+    .desktop-logo.desktop-logo-dark {
+        display: block;
+    }
+
+    .mobile-logo,
+    .desktop-logo {
+        display: none;
+    }
+
+    .side-menu__icon {
+        border-color: #{$border};
+    }
+
+    @media (min-width: 992px) {
+
+        &[data-vertical-style="hover"],
+        &[data-vertical-style="hover1"] {
+            @media (min-width: 992px) {
+                .app.show-sidenav .app-sidebar__header {
+
+                    .desktop-logo {
+                        display: none !important;
+                    }
+
+                    .mobile-logo {
+                        display: none !important;
+                    }
+
+                    .mobile-logo-dark {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+
+        &[data-vertical-style="doublemenu"],
+        &[data-vertical-style="doublemenu-tabs"] {
+            @media (min-width: 992px) {
+                .app-sidebar__header {
+
+                    .desktop-logo {
+                        display: none !important;
+                    }
+
+                    .mobile-logo {
+                        display: none !important;
+                    }
+
+                    .mobile-logo-dark {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .sidebar-mini.sidenav-toggled {
+            .mobile-logo {
+                display: none;
+
+                &.mobile-logo-dark {
+                    display: block;
+                }
+            }
+
+            &.show-sidenav {
+                .desktop-logo {
+                    display: none;
+
+                    &.desktop-logo-dark {
+                        display: block;
+                    }
+                }
+
+                .mobile-logo {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .app-sidebar__user {
+        color: #3c4858;
+    }
+
+    .ps__rail-y.ps--clicking .ps__thumb-y {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .ps .ps__rail-y.ps--clicking {
+        background-color: transparent;
+    }
+
+    .ps .ps__rail-y {
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+    }
+
+    .ps__thumb-y {
+        background-color: transparent;
+    }
+
+    @media (min-width: 992px) {
+        &[data-vertical-style="doublemenu-tabs"] {
+            .sidetab-menu {
+                --muted: #a8b1bd;
+                --white: #fff;
+                --gray-200: #f2f4f5;
+                --gray-300: #e6eaeb;
+                --gray-800: #383853;
+                --color: #3c4858;
+                --form-border: #e1e1e1;
+            }
+        }
+    }
+}

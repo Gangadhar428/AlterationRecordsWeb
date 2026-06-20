@@ -1,0 +1,246 @@
+[dir="rtl"] {
+    body {
+        direction: rtl;
+    }
+
+    .side_menu_img {
+        transform: translate(50%, -50%) rotate(-45deg);
+    }
+
+    .sidebar.sidebar-right {
+        transform: translate(-100%, 0);
+    }
+
+    .sidebar.sidebar-right.sidebar-open {
+        transform: translate(0, 0);
+    }
+
+    .select2-dropdown {
+        direction: ltr !important;
+        text-align: end;
+    }
+
+    .ribbon6 {
+        transform: rotate(-45deg);
+    }
+
+    .power-ribbon-top-left span {
+        transform: rotate(45deg);
+
+        i {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .tooltip {
+        inset-block-start: 0;
+    }
+
+    .power-ribbon-bottom-right span {
+        transform: rotate(45deg);
+
+        i {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .power-ribbon-bottom-left span {
+        transform: rotate(-45deg);
+
+        i {
+            transform: rotate(45deg);
+        }
+    }
+
+    .power-ribbon-top-right span {
+        transform: rotate(-45deg);
+
+        i {
+            transform: rotate(45deg);
+        }
+    }
+
+    .ribbon-top-left span {
+        transform: rotate(45deg);
+    }
+
+    .ribbon-top-right span {
+        transform: rotate(-45deg);
+    }
+
+    .ribbon-bottom-left span {
+        transform: rotate(-45deg);
+    }
+
+    .ribbon-bottom-right span {
+        transform: rotate(45deg);
+    }
+
+    .shape-text {
+        transform: rotate(-46deg);
+    }
+
+    [type=email],
+    [type=number],
+    [type=tel],
+    [type=url] {
+        direction: rtl;
+    }
+
+    .card-link+.card-link {
+        margin-inline-end: 1rem;
+        margin-inline-start: 0;
+    }
+
+    .errorpage .error-content {
+        transform: translate(50%, -50%);
+    }
+
+    .online-status .status {
+        transform: translateX(60px) translateY(2px);
+    }
+
+    .panel-shape {
+        svg text {
+            transform: matrix(-1, 0, 0, 1, 69.7256, 116.269);
+        }
+    }
+
+    .pricing-table .price-header .permonth {
+        transform: translateX(50%);
+    }
+
+    .nvd3 text {
+        text-anchor: start !important;
+    }
+
+    .nvd3 .nv-legend-text {
+        text-anchor: end !important;
+    }
+
+    .c3 text {
+        text-anchor: start !important;
+    }
+
+    // .vertical {
+    //     transform: rotate(90deg);
+    // }
+
+    .ps__rail-y {
+        left: 0 !important;
+        right: auto !important;
+    }
+
+    .ps__thumb-y {
+        left: 1px;
+        right: inherit;
+    }
+
+    .pull-right {
+        float: left;
+    }
+
+    .pull-left {
+        float: right;
+    }
+
+    .br-s-0 {
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+
+    .br-e-0 {
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+    }
+
+    .ri-arrow-right-s-line {
+        transform: rotate(180deg);
+    }
+
+    .ri-arrow-left-s-line {
+        transform: rotate(180deg);
+    }
+
+    .fa-angle-right {
+        transform: rotate(180deg);
+    }
+
+    .fa-angle-double-right {
+        transform: rotate(180deg);
+    }
+
+    .tree li i.si-arrow-right-circle {
+        transform: rotate(180deg);
+
+    }
+
+    .active.carousel-item-start,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(100%) !important;
+    }
+
+    .active.carousel-item-end {
+        transform: translateX(-100%) !important;
+    }
+
+    .carousel-item-next:not(.carousel-item-start) {
+        transform: translateX(-100%) !important;
+        transform: translateX(-100%) !important;
+    }
+
+    .carousel .carousel-control-next,
+    .carousel .carousel-control-prev {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    #basicSlider .MS-content {
+        direction: ltr;
+    }
+
+    .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow,
+    .bs-tooltip-end .tooltip-arrow {
+        inset-inline-start: auto;
+        inset-inline-end: 0;
+
+        &:before {
+            transform: rotate(180deg) !important;
+        }
+    }
+
+    .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow,
+    .bs-tooltip-start .tooltip-arrow {
+        inset-inline-start: 0;
+        inset-inline-end: auto;
+
+        &:before {
+            transform: rotate(180deg) !important;
+        }
+    }
+
+    .badge-top {
+        inset-inline-end: 100%;
+        inset-inline-start: auto;
+    }
+
+    .landing-layout .sidemenu-landing {
+        transform: translate(100%, 0);
+    }
+
+    .leaflet-pane,
+    .leaflet-tile,
+    .leaflet-marker-icon,
+    .leaflet-marker-shadow,
+    .leaflet-tile-container {
+        inset-inline-end: 0;
+        inset-inline-start: auto;
+    }
+
+    .smartphoto {
+        direction: ltr !important;
+    }
+    .fc .fc-button .fc-icon {
+        transform: rotate(180deg);
+    }
+
+}

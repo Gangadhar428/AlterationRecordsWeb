@@ -1,0 +1,27 @@
+[data-skins="no-shadow"] {
+    --shadow: none !important;
+    --shadow-color: none !important;
+
+    .page {
+        background-color: #{$white};
+
+        .card {
+            border: 1px solid #{$border};
+            box-shadow: none;
+        }
+
+        .app-sidebar, .sidebar {
+            box-shadow: none;
+        }
+        .page-header {
+            box-shadow: none;
+        } 
+    }
+
+    &[data-width="boxed"] {
+        .page {
+            --background: var(--white);
+        }
+    }
+
+}

@@ -1,0 +1,320 @@
+/*----- 38. Avatars -----*/
+
+// .avatar {
+// 	width: 42px;
+// 	height: 42px;
+// 	line-height: 2.5;
+// 	display: inline-block;
+// 	position: relative;
+// 	text-align: center;
+// 	color: $white;
+// 	font-weight: 400;
+// 	vertical-align: bottom;
+// 	font-size: .875rem;
+// 	-webkit-user-select: none;
+// 	-moz-user-select: none;
+// 	-ms-user-select: none;
+// 	user-select: none;
+// 	i {
+// 		font-size: 1rem;
+// 		vertical-align: initial;
+// 	}
+// }
+.avatar-status {
+	position: absolute;
+	inset-inline-end: -2px;
+	inset-block-end: -2px;
+	width: .75rem;
+	height: .75rem;
+	border: 2px solid $white;
+	background: $gray;
+	border-radius: 50%;
+}
+.avatar-sm {
+	width: 1.5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	font-size: .75rem;
+}
+.avatar-md {
+	width: 2.5rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	font-size: 1rem;
+}
+.avatar-lg {
+	width: 3rem;
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 1.25rem;
+}
+.avatar-xl {
+	width: 4rem;
+	height: 4rem;
+	line-height: 4rem;
+	font-size: 1.75rem;
+}
+.avatar-xxl {
+	width: 5rem;
+	height: 5rem;
+	line-height: 5rem;
+	font-size: 2rem;
+}
+.avatar-placeholder {
+	background: #ced4da url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="134" height="134" viewBox="0 0 134 134"><path fill="$gray" d="M65.92 66.34h2.16c14.802.42 30.928 6.062 29.283 20.35l-1.618 13.32c-.844 6.815-5.208 7.828-13.972 7.866H52.23c-8.764-.038-13.13-1.05-13.973-7.865l-1.62-13.32C34.994 72.4 51.12 66.76 65.92 66.34zM49.432 43.934c0-9.82 7.99-17.81 17.807-17.81 9.82 0 17.81 7.99 17.81 17.81 0 9.82-7.99 17.807-17.81 17.807-9.82 0-17.808-7.987-17.808-17.806z"/></svg>') no-repeat (center / 80%);
+}
+.avatar-list {
+	margin: 0 0 -.5rem;
+	padding: 0;
+	font-size: 0;
+	display: flex !important;
+	align-items: flex-end !important;
+	.avatar {
+		margin-block-end: .5rem;
+		&:not(:last-child) {
+			margin-inline-end: .5rem;
+		}
+	}
+}
+.avatar-list-stacked .avatar {
+	margin-inline-end: -.8em !important;
+	box-shadow: 0 0 0 2px $white;
+}
+.avatar-blue {
+	background-color: #c8d9f1;
+	color: $blue;
+}
+.avatar-indigo {
+	background-color: #d1d5f0;
+	color: $indigo;
+}
+.avatar-purple {
+	background-color: #e4cff9;
+	color: $purple;
+}
+.avatar-pink {
+	background-color: #fcd3e1;
+	color: $pink;
+}
+.avatar-red {
+	background-color: #f0bcbc;
+	color: $danger;
+}
+.avatar-orange {
+	background-color: #fee0c7;
+	color: $orange;
+}
+.avatar-yellow {
+	background-color: #fbedb7;
+	color: $warning;
+}
+.avatar-green {
+	background-color: #cfeab3;
+	color: $success;
+}
+.avatar-teal {
+	background-color: #bfefea;
+	color: $teal;
+}
+.avatar-cyan {
+	background-color: #b9e3ea;
+	color: $cyan;
+}
+.avatar-white {
+	background-color: white;
+	color: $white;
+}
+.avatar-gray {
+	background-color: #dbdde0;
+	color: $gray;
+}
+.avatar-gray-dark {
+	background-color: #c2c4c6;
+	color: $gray-dark;
+}
+.avatar-azure {
+	background-color: #c7e6fb;
+	color: $info;
+}
+.avatar-lime {
+	background-color: #d7f2c2;
+	color: $lime;
+}
+// ----------------------------------------------------
+// ----------------------------------------------------
+.avatar-group {
+    display: flex;
+    align-items: end;
+}
+.avatar-group .avatar, .avatar-group .avatar-status, .avatar-group .avatar-badge {
+    margin: 2px;
+}
+.avatar-badge, .avatar-btn {
+    position: relative;
+}
+.avatar-badge .number-badge {
+    font-size: 7px;
+    inset-block-start: -8px;
+    inset-inline-end: -3px;
+    width: 16px;
+    height: 16px;
+}
+.number-badge {
+    position: absolute;
+    inset-block-start: -7px;
+    inset-inline-end: -5px;
+    padding: 3px;
+    font-size: 11px;
+    line-height: 1;
+    border: 2px solid var(--border);
+    height: 20px;
+    width: 20px;
+}
+.avatar-badge.avatar-sm .number-badge {
+    font-size: 7px;
+    inset-block-start: -7px;
+    inset-inline-end: -6px;
+    width: 16px;
+    height: 16px;
+}
+.avatar-badge.avatar-md .number-badge {
+	inset-block-start: -8px;
+    inset-inline-end: -5px;
+    font-size: 10px;
+    height: 19px;
+    width: 19px;
+}
+.avatar-badge.avatar-lg .number-badge {
+	height: 22px;
+    width: 22px;
+    line-height: 1.2;
+    font-size: 11px;
+}
+.avatar-badge.avatar-xl .number-badge {
+	height: 26px;
+    width: 26px;
+    font-size: 13px;
+}
+.avatar-badge.avatar-xxl .number-badge {
+	height: 28px;
+    width: 28px;
+    line-height: 1.09;
+    font-size: 15px;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+}
+.text-wrap> :last-child {
+    margin-block-end: 0;
+}
+.avatar-group .avatar-badge {
+    margin-inline-end: 0.5rem;
+}
+.avatar-list-stacked>.avatar:hover {
+    z-index: 1;
+    transform: translateY(-3px);
+}
+.avatar-list-stacked>.avatar {
+    box-shadow: 0 0 0 2px var(--box-shadow);
+    transition: transform ease 200ms;
+}
+// =========================================================
+.avatar-xs {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 11px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.avatar-sm {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.avatar {
+    position: relative;
+    width: 42px ;
+    height: 42px;
+    border-radius: 100%;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+.avatar-lg {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 28px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.avatar-xl {
+    width: 84px !important;
+    height: 84px !important;
+    font-size: 36px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.avatar-xxl {
+    width: 100px !important;
+    height: 100px !important;
+    font-size: 56px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.avatar-list-stacked {
+	display: flex !important;
+}
+.avatar-status-online {
+    position: relative;
+}
+.avatar-status-ofline {
+    position: relative;
+}
+.avatar-status-online.online::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 2px;
+    inset-block-end: -1px;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid $white;
+    background: $success;
+    border-radius: 50%;
+}
+.avatar-status-ofline::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 1px;
+    inset-block-end: 0px;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid var(--white);
+    background: var(--gray-500);
+    border-radius: 50%;
+}
+.avatar-status-ofline.offline::after {
+    background-color: $gray-500;
+}
+.avatar-badge.avatar .number-badge {
+    height: 20px !important;
+    width: 20px !important;
+    line-height: 1 !important;
+    font-size: 11px;
+}

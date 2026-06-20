@@ -1,0 +1,226 @@
+/*-----24. Alerts-----*/
+
+.alert {
+	padding: 1rem;
+	border-radius: 3px;
+	font-size: 0.9375rem;
+	line-height: 0.9;
+	&:first-child {
+		margin-block-end: 1rem !important;
+	}
+	&:last-child {
+		margin-block-end: 0;
+	}
+	p {
+		margin-block-end:0px !important;
+	}
+}
+.alert-link {
+	font-weight: 400;
+	&:hover, a:hover {
+		text-decoration: underline;
+	}
+}
+.alert-dismissible {
+	.close {
+		color: inherit;
+	}
+}
+.alert-primary {
+	background-color: $primary-02;
+	color: $primary;
+	border: 1px solid $primary-02;
+	.alert-link {
+		color: $primary;
+		font-weight: 600 !important;
+	}
+	hr {
+		border-block-start-color: rgba(var(--primary-rgb), 0.9) !important;
+	}
+}
+.alert-secondary {
+	background-color: rgba(var(--secondary-bg-color-rgb), 0.2);
+	color: $secondary;
+	border: 1px solid rgba(var(--secondary-bg-color-rgb), 0.2);
+	.alert-link {
+		color: $secondary;
+		font-weight: 600 !important;
+	}
+	hr {
+		border-block-start-color: rgba(var(--secondary-bg-color-rgb), 0.9) !important;
+	}
+}
+.alert-success {
+	background-color: rgba(var(--success-bg-color-rgb), 0.2);
+	color: $success;
+	border: 1px solid rgba(var(--success-bg-color-rgb), 0.2);
+	hr {
+		border-block-start-color: rgba(var(--success-bg-color-rgb), 0.9) !important;
+	}
+	.alert-link {
+		color: $success;
+		font-weight: 600 !important;
+	}
+}
+.alert-info {
+	background-color: rgba(var(--info-bg-color-rgb), 0.2);
+	color: $info;
+	border: 1px solid rgba(var(--info-bg-color-rgb), 0.2);
+	hr {
+		border-block-start-color: rgba(var(--info-bg-color-rgb), 0.9) !important;
+	}
+	.alert-link {
+		color: $info;
+		font-weight: 600 !important;
+	}
+}
+.alert-warning {
+	background-color: rgba(var(--warning-bg-color-rgb), 0.2);
+	color: $warning;
+	border: 1px solid rgba(var(--warning-bg-color-rgb), 0.2);
+	hr {
+		border-block-start-color: rgba(var(--warning-bg-color-rgb), 0.9) !important;
+	}
+	.alert-link {
+		color: $warning;
+		font-weight: 600 !important;
+	}
+}
+.alert-danger {
+	background-color: rgba(var(--danger-bg-color-rgb), 0.2);
+	color: $danger;
+	border: 1px solid rgba(var(--danger-bg-color-rgb), 0.2);
+	hr {
+		border-block-start-color: rgba(var(--danger-bg-color-rgb), 0.9) !important;
+	}
+	.alert-link {
+		color: $danger;
+		font-weight: 600 !important;
+	}
+}
+.alert-light {
+	background-color: rgba(var(--light-rgb), 0.5);
+	color: $dark;
+	border: 1px solid $border;
+	hr {
+		border-block-start-color: rgba(var(--light-rgb), 0.9) !important;
+	}
+	.alert-link {
+		color: $dark;
+		font-weight: 600 !important;
+	}
+}
+.alert-dark {
+	background-color: rgba(var(--dark-rgb), 0.2);
+	color: $default-color;
+	border: 1px solid $border;
+	hr {
+		border-block-start-color: rgba(var(--dark-rgb), 0.9) !important;
+	}
+	.alert-link {
+		color: $default-color;
+		font-weight: 600 !important;
+	}
+}
+.alert-icon {
+	padding-inline-start: 3rem;
+	>i {
+		color: inherit !important;
+		font-size: 1rem;
+		position: absolute;
+		inset-block-start: 1rem;
+		inset-inline-start: 1rem;
+	}
+}
+.alert-avatar {
+	padding-inline-start: 3.75rem;
+	.avatar {
+		position: absolute;
+		inset-block-start: .45rem;
+		inset-inline-start: .75rem;
+	}
+}
+
+.alert-solid-primary {
+	color: $fixed-white;
+	background-color: $primary;
+	border-color: $primary;
+}
+.alert-solid-secondary {
+	color: $fixed-white;
+	background-color: $secondary;
+	border-color: $secondary;
+}
+.alert-solid-success {
+	color: $fixed-white;
+	background-color: $success;
+	border-color: $success;
+}
+.alert-solid-warning {
+	color: $fixed-white;
+	background-color: $warning;
+	border-color: $warning;
+}
+.alert-solid-danger {
+	color: $fixed-white;
+	background-color: $danger;
+	border-color: $danger;
+}
+.alert-solid-info {
+	color: $fixed-white;
+	background-color: $info;
+	border-color: $info;
+}
+.alert-solid-dark {
+	color: $fixed-white;
+	background-color: $dark;
+	border-color: $border;
+}
+.alert-solid-light {
+	color: $dark;
+	background-color: $light;
+	border-color: $light;
+}
+
+// Alerts outline colors-------------
+
+.alert-outline-primary {
+	background-color: $white;
+	border-width: 1px;
+	border-color: $primary;
+}
+.alert-outline-secondary {
+	background-color: $white;
+	border-width: 1px;
+	border-color: $secondary;
+}
+.alert-outline-success {
+	background-color: $white;
+	border-width: 1px;
+	border-color: $success;
+}
+.alert-outline-warning {
+	background-color: $white;
+	border-width: 1px;
+	border-color: $warning;
+}
+.alert-outline-danger {
+	background-color: $white;
+	border-width: 1px;
+	border-color: $danger;
+}
+.alert-outline-info {
+	background-color: $white;
+	border-width: 1px;
+	border-color: $info;
+}
+.alert-outline-dark {
+	background-color: $white;
+	border-width: 1px;
+	border-color: $border;
+}
+.alert-outline-light {
+	background-color: $white;
+	border-width: 1px;
+	border-color: $light;
+}

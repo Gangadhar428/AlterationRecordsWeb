@@ -1,0 +1,71 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project        :   Spaner - HTML5 Bootstrap Admin Template
+Version        :   V.1
+Create Date    :   11/12/20
+Copyright      :   Spruko Technologies Private Limited 
+Author         :   SprukoSoft
+Author URL     :   https://themeforest.net/user/sprukosoft
+Support	       :   support@spruko.com
+License        :   Licensed under ThemeForest License
+
+-------------------------------------------------------------------*/
+@import "variables";
+
+@import "plugins/accordion/accordion";
+@import "plugins/calendar/calendar";
+@import "plugins/calendar/stylesheet";
+@import "plugins/chartist/chartist-plugin-tooltip";
+@import "plugins/chartist/chartist";
+@import "plugins/charts-c3/c3-chart";
+@import "plugins/colorpicker/classic.min";
+@import "plugins/colorpicker/monolith.min";
+@import "plugins/colorpicker/nano.min";
+@import "plugins/datatable/buttons.bootstrap5.min";
+@import "plugins/datatable/dataTables.bootstrap5";
+@import "plugins/datatable/responsive.bootstrap5";
+@import "plugins/date-picker/date-picker";
+@import "plugins/draggable/jquery-ui-draggable";
+@import "plugins/fancyuploder/fancy_fileupload";
+@import "plugins/fileuploads/fileupload";
+@import "plugins/flatpickr/flatpickr";
+@import "plugins/fullcalendar/fullcalendar";
+@import "plugins/gallery/gallery";
+@import "plugins/inputtags/inputtags";
+@import "plugins/ion-rangeslider/ion.rangeSlider";
+@import "plugins/ion-rangeSlider/ion.rangeSlider.skinFlat";
+@import "plugins/jquery-nice-select/nice-select";
+@import "plugins/jquery.richtext/richtext.min";
+@import "plugins/jquery.timepicker/jquery.timepicker-dark";
+@import "plugins/jquery.timepicker/jquery.timepicker";
+@import "plugins/jquery.vmap/jqvmap.min";
+@import "plugins/jvectormap/jquery-jvectormap-2.0.2";
+@import "plugins/jqvmap/jqvmap.min";
+@import "plugins/leaflet/leaflet";
+@import "plugins/morris/morris";
+@import "plugins/multipleselect/multiple-select";
+@import "plugins/multislider/multislider";
+// @import "plugins/notify/jquery.growl";
+@import "plugins/notify/notifIt";
+@import "plugins/owl-carousel/owl.carousel";
+@import "plugins/p-scroll/p-scroll";
+@import "plugins/perfect-scrollbar/p-scrollbar";
+@import "plugins/pignose-calendar/pignose-caldendar";
+@import "plugins/prism/prism";
+@import "plugins/quill/quill.bubble";
+@import "plugins/quill/quill.snow";
+@import "plugins/rating/examples";
+@import "plugins/ratings-2/star-rating-svg";
+@import "plugins/select2/select2.min";
+@import "plugins/sidebar/sidebar";
+@import "plugins/SmartPhoto-master/smartphoto";
+@import "plugins/summernote-editor/summernote1";
+@import "plugins/sumoselect/sumoselect";
+@import "plugins/sweet-alert/sweetalert";
+@import "plugins/tabs/tabs";
+@import "plugins/telephoneinput/telephoneinput";
+// @import "plugins/timeline/timeline.min";
+@import "plugins/timeline/vertical-timeline";
+@import "plugins/treeview/treeview";
+@import "plugins/wysiwyag/richtext";

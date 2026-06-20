@@ -1,0 +1,211 @@
+[data-menu-style="dark"] {
+    .app-sidebar {
+        --menu-bg: #1b2433;
+        --white: #1b2433;
+        --border: rgba(255, 255, 255, 0.1);
+        --color: #dde5ed;
+        --background: rgba(255, 255, 255, 0.05);
+        box-shadow: none;
+
+        .slide-menu a.active {
+            color: $fixed-white;
+        }
+
+        .sidetab-menu {
+            .tab-menu-heading {
+                .nav-tabs {
+                    .nav-link.active {
+                        background-color: $primary;
+                        color: #fff !important;
+
+                        p {
+                            color: #fff;
+                        }
+                    }
+
+                    .nav-item {
+                        .nav-link {
+                            color: $default-color;
+                        }
+                    }
+                }
+            }
+
+            .card {
+                box-shadow: 0 12px 11px -3px rgb(46 49 49 / 25%);
+                ;
+            }
+        }
+    }
+
+    .app-sidebar__header {
+        background: $sidemenu-bg;
+    }
+
+    .side-menu__item {
+
+        &.active .side-menu__icon,
+        &:hover .side-menu__icon,
+        &:focus .side-menu__icon {
+            border-color: #{$border};
+            color: #fff !important;
+        }
+    }
+
+    .slide-item,.sub-side-menu__item,
+    .sub-slide-item2 {
+
+        &:hover {
+            color: #fff !important;
+        }
+    }
+
+    .desktop-logo {
+        display: block;
+    }
+
+    .mobile-logo,
+    .desktop-logo-dark {
+        display: none;
+    }
+
+    .slide-right,
+    .slide-left {
+        svg {
+            fill: #fff;
+            color: #fff;
+        }
+    }
+
+    @media (min-width: 992px) {
+
+        &[data-vertical-style="hover"],
+        &[data-vertical-style="hover1"] {
+            @media (min-width: 992px) {
+                .app.show-sidenav .app-sidebar__header {
+
+                    .desktop-logo {
+                        display: none !important;
+                    }
+
+                    .mobile-logo {
+                        display: block !important;
+                    }
+
+                    .mobile-logo-dark {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+
+        &[data-vertical-style="doublemenu"],
+        &[data-vertical-style="doublemenu-tabs"] {
+            @media (min-width: 992px) {
+                .app-sidebar__header {
+
+                    .desktop-logo {
+                        display: none !important;
+                    }
+
+                    .mobile-logo {
+                        display: block !important;
+                    }
+
+                    .mobile-logo-dark {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .side-menu__icon {
+        border-color: #{$border};
+    }
+
+    @media (min-width: 992px) {
+        .sidebar-mini.sidenav-toggled {
+            .mobile-logo {
+                display: block;
+
+                &.mobile-logo-dark {
+                    display: none;
+                }
+            }
+
+            &.show-sidenav {
+                .desktop-logo {
+                    display: block;
+
+                    &.desktop-logo-dark {
+                        display: none;
+                    }
+                }
+
+                .mobile-logo {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .app-sidebar__user {
+        color: #fff;
+    }
+
+    .ps__rail-y.ps--clicking .ps__thumb-y {
+        background-color: rgba($color: #fff, $alpha: 0.3);
+    }
+
+    .ps .ps__rail-y.ps--clicking {
+        background-color: transparent;
+    }
+
+    .ps .ps__rail-y {
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+    }
+
+    .ps__thumb-y {
+        background-color: transparent;
+    }
+
+    @media (min-width: 992px) {
+
+        &[data-vertical-style=hover1],
+        &[data-vertical-style=doublemenu],
+        &[data-vertical-style=doublemenu-tabs] {
+            .app .side-menu__label1 a {
+                color: #fff !important;
+            }
+        }
+
+        &[data-vertical-style="doublemenu-tabs"] {
+            .sidetab-menu {
+                --muted: #828b9d;
+                --white: #1b2433;
+                --gray-100: rgba(255, 255, 255, 0.2);
+                --gray-200: #17171c;
+                --gray-300: #393946;
+                --gray-800: #c7c7d1;
+                --color: #dde5ed;
+                --form-border: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        &[data-vertical-style=doublemenu-tabs] .app .slide-menu .sidetab-menu .panel-tabs li a {
+
+            &.active,
+            &:hover {
+                background: $menu-primary;
+                border: 1px solid $menu-primary;
+            }
+        }
+    }
+}

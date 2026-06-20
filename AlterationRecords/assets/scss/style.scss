@@ -1,0 +1,193 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project        :   Spaner - HTML5 Bootstrap Admin Template
+Version        :   V.1
+Create Date    :   11/12/20
+Copyright      :   Spruko Technologies Private Limited 
+Author         :   SprukoSoft
+Author URL     :   https://themeforest.net/user/sprukosoft
+Support	       :   support@spruko.com
+License        :   Licensed under ThemeForest License
+
+-------------------------------------------------------------------*/
+@import "variables";
+
+
+/*
+ accordion
+ alerts
+ avatars
+ badges
+ bootstrap-styles
+ breadcrumb
+ buttons
+ cards
+ carousel
+ dropdown
+ forms
+ grid";
+ input-group
+ modal
+ navigation
+ pagination
+ panel
+ popover
+ pricing
+ progress
+ table
+ tags
+ thumbnail
+ tooltip
+ count-down
+ custom-control
+ custom-styles
+ font
+ gallery
+ highlight
+ labels
+ lists
+ loader
+ media
+ navbar
+ produt
+ rating
+ tabs-menu
+ timeline
+ footer
+ header
+ horizontal-menu
+ item-card----------
+ list-icons
+ sidemenu-----------
+ theme-colors
+ alignment
+ datepicker
+ jvector
+ select2
+ select-group
+ selectize
+ calender
+ chart
+ chat
+ error-pages
+ range
+ ribbon
+ widgets
+ background
+ border
+ display
+ height
+ margin
+ padding
+ typography
+ width
+
+
+6.  blackquote
+26. components-col
+44. horizontal-menu-1
+46. item-styles
+58. weather-cards
+64  float-elements
+68  position
+*/
+
+/* ######## FONT ######## */
+@import "custom/Fonts/fonts";
+
+
+/* ######## BOOTSTRAP ######## */ 
+@import "variables";
+@import "bootstrap/bootstrap-styles";
+@import "bootstrap/accordion";
+@import "bootstrap/alerts";
+@import "bootstrap/avatars";
+@import "bootstrap/badges";
+@import "bootstrap/breadcrumb";
+@import "bootstrap/buttons";
+@import "bootstrap/cards";
+@import "bootstrap/carousel";
+@import "bootstrap/dropdown";
+@import "bootstrap/forms";
+@import "bootstrap/grid";
+@import "bootstrap/input-group";
+@import "bootstrap/modal";
+@import "bootstrap/navigation";
+@import "bootstrap/pagination";
+@import "bootstrap/panel";
+@import "bootstrap/popover";
+@import "bootstrap/pricing";
+@import "bootstrap/progress";
+@import "bootstrap/table";
+@import "bootstrap/tags";
+@import "bootstrap/thumbnail";
+@import "bootstrap/toast";
+@import "bootstrap/tooltip";
+
+/*  ######## CUSTOM-STYLES ######## */ 
+@import "custom/count-down";
+@import "custom/custom-control";
+@import "custom/custom-styles";
+@import "custom/font";
+@import "custom/gallery";
+@import "custom/highlight";
+@import "custom/image";
+@import "custom/labels";
+@import "custom/landing";
+@import "custom/lists";
+@import "custom/loader";
+@import "custom/media";
+@import "custom/navbar";
+@import "custom/ecommerce";
+@import "custom/rating";
+@import "custom/tabs-menu";
+@import "custom/timeline";
+
+/* ######## LAYOUT-STYLES ######## */
+@import "layout/double-menu-styles";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/horizontal-menu";
+@import "layout/item-card";
+@import "layout/list-icons";
+@import "layout/sidemenu";
+@import "layout/theme-colors";
+
+/* ######## LIB-STYLES ######## */
+@import "lib/alignment";
+@import "lib/chart";
+@import "lib/datepicker";
+@import "lib/jquerysteps";
+@import "lib/jvector";
+@import "lib/select2";
+@import "lib/select-group";
+@import "lib/selectize";
+@import "lib/datatable";
+@import "lib/notifications";
+@import "lib/parsely";
+
+/* ######  Switcher ###### */
+@import "./switcher";
+
+
+/* ######## TEMP-STYLES ######## */
+@import "template/calender";
+@import "template/chart";
+@import "template/chat";
+@import "template/error-pages";
+@import "template/range";
+@import "template/ribbon";
+@import "template/widgets";
+
+
+
+/* ######## UTILITIES-STYLES ######## */
+@import "utilities/background";
+@import "utilities/border";
+@import "utilities/display";
+@import "utilities/height";
+@import "utilities/margin";
+@import "utilities/padding";
+@import "utilities/typography";
+@import "utilities/width";

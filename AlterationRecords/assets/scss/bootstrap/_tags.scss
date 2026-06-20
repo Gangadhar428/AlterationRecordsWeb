@@ -1,0 +1,426 @@
+/*----44. Tags-----*/
+
+.tag {
+	font-size: 0.75rem;
+	background-color: #e9eaf3;
+	color: $fixed-black;
+	border-radius: 3px;
+	padding: 0 .5rem;
+	line-height: 2em;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	cursor: default;
+	font-weight: 400;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+a.tag {
+	text-decoration: none;
+	cursor: pointer;
+	transition: .3s color, .3s $background;
+	&:hover {
+		background-color: rgba(110, 118, 135, 0.2);
+		color: inherit;
+	}
+}
+.tag-addon {
+	display: inline-block;
+	padding: 0 .5rem;
+	color: inherit;
+	text-decoration: none;
+	// margin: 0 -.5rem 0 .5rem;
+	text-align: center;
+	min-width: 1.5rem;
+	margin-block: 0rem;
+	margin-inline-end: -0.5rem;
+	margin-inline-start: 0.6rem;
+	i {
+		vertical-align: middle;
+		margin: 0 -.25rem;
+	}
+}
+a.tag-addon {
+	text-decoration: none;
+	cursor: pointer;
+	transition: .3s color, .3s $background;
+	&:hover {
+		background: rgba(0, 0, 0, 0.16);
+		color: inherit;
+	}
+}
+.tag-avatar {
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 3px 0 0 3px;
+	// margin: 0 .5rem 0 -.5rem;
+	margin-block-start: 0px;
+    margin-inline-end: 0.5rem;
+    margin-block-end: 0px;
+    margin-inline-start: -0.5rem;
+}
+.tag-blue {
+	background-color: $blue;
+	color: $fixed-white;
+}
+.tag-indigo {
+	background-color: $indigo;
+	color: $fixed-white;
+}
+.tag-purple {
+	background-color: $purple;
+	color: $fixed-white;
+}
+.tag-pink {
+	background-color: $pink;
+	color: $fixed-white;
+}
+.tag-red {
+	background-color: $danger;
+	color: $fixed-white;
+}
+.tag-orange {
+	background-color: $orange;
+	color: $fixed-white;
+}
+.tag-yellow {
+	background-color: $warning;
+	color: $fixed-white;
+}
+.tag-green {
+	background-color: $success;
+	color: $fixed-white;
+}
+.tag-teal {
+	background-color: $teal;
+	color: $fixed-white;
+}
+.tag-cyan {
+	background-color: $cyan;
+	color: $fixed-white;
+}
+.tag-white {
+	background-color: $white;
+	color: $white;
+}
+.tag-gray {
+	background-color: $gray;
+	color: $fixed-white;
+}
+.tag-gray-dark {
+	background-color: $gray-dark;
+	color: $fixed-white;
+}
+.tag-azure {
+	background-color: $info;
+	color: $fixed-white;
+}
+.tag-lime {
+	background-color: $lime;
+	color: $fixed-white;
+}
+.tag-success {
+	background-color: $success;
+	color: $fixed-white;
+}
+.tag-info {
+	background-color: $info;
+	color: $fixed-white;
+}
+.tag-warning {
+	background-color: $warning;
+	color: $fixed-white;
+}
+.tag-danger {
+	background-color: $danger;
+	color: $fixed-white;
+}
+.tag-light {
+	background-color: $light;
+	color: $default-color;
+}
+.tag-dark {
+	background-color: $gray-dark;
+	color: $fixed-white;
+}
+.tag-rounded {
+	border-radius: 50px;
+	.tag-avatar {
+		border-radius: 50px;
+	}
+}
+.tags {
+	margin-block-end: -.5rem;
+	font-size: 0;
+	>.tag {
+		margin-block-end: .5rem;
+		&:not(:last-child) {
+			margin-inline-end: .5rem;
+		}
+	}
+}
+.rounded-pill {
+    border-radius: 50rem !important;
+}
+// ---------------------------------------------------
+// ---------------------------------------------------
+// tags-colrs------
+.tag-primary {
+	color: $fixed-white;
+	background-color: $primary;
+	border-color: $primary;
+}
+.tag-secondary {
+	color: $fixed-white;
+	background-color: $secondary;
+	border-color: $secondary;
+}
+.tag-success {
+	color: $fixed-white;
+	background-color: $success;
+	border-color: $success;
+}
+.tag-warning {
+	color: $fixed-white;
+	background-color: $warning;
+	border-color: $warning;
+}
+.tag-danger {
+	color: $fixed-white;
+	background-color: $danger;
+	border-color: $danger;
+}
+.tag-info {
+	color: $fixed-white;
+	background-color: $info;
+	border-color: $info;
+}
+.tag-light {
+	color: $default-color;
+	background-color: $light;
+	border-color: $light;
+}
+.tag-dark {
+	color: $fixed-white;
+	background-color: $dark;
+	border-color: $dark;
+}
+
+// transparent-tags-colrs------
+.tag-primary-transparent {
+	background-color: $primary-02;
+  color: $primary;
+  border: 1px solid $primary-02;
+  &:hover {
+	color: $white !important;
+	background-color: $primary !important;
+	border: 1px solid $primary;
+  }
+}
+.tag-secondary-transparent {
+	background-color: rgba(var(--secondary-bg-color-rgb), 0.2);
+	color: $secondary;
+	border: 1px solid rgba(var(--secondary-bg-color-rgb), 0.2);
+	&:hover {
+	  color: $white !important;
+	  background-color: $secondary !important;
+	  border: 1px solid $secondary;
+	}
+}
+.tag-success-transparent {
+	background-color: rgba(var(--success-bg-color-rgb), 0.2);
+	color: $success;
+	border: 1px solid rgba(var(--success-bg-color-rgb), 0.2);
+	&:hover {
+	  color: $white !important;
+	  background-color: $success !important;
+	  border: 1px solid $success !important;
+	}
+}
+.tag-info-transparent {
+	background-color: rgba(var(--info-bg-color-rgb), 0.2);
+	color: $info;
+	border: 1px solid rgba(var(--info-bg-color-rgb), 0.2);
+	&:hover {
+	  color: $white !important;
+	  background-color: $info !important;
+	  border: 1px solid $info;
+	}
+}
+.tag-warning-transparent {
+	background-color: rgba(var(--warning-bg-color-rgb), 0.2) !important;
+	color: $warning;
+	border: 1px solid rgba(var(--warning-bg-color-rgb), 0.2);
+	&:hover {
+	  color: $white !important;
+	  background-color: $warning !important;
+	  border: 1px solid $warning;
+	}
+}
+.tag-danger-transparent {
+	background-color: rgba(var(--danger-bg-color-rgb), 0.2);
+	color: $danger;
+	border: 1px solid rgba(var(--danger-bg-color-rgb), 0.2);
+	&:hover {
+	  color: $white !important;
+	  background-color: $danger !important;
+	  border: 1px solid $danger;
+	}
+}
+.tag-light-transparent {
+	background-color: rgba(var(--light-rgb), 0.2);
+	color: $black;
+	border: 1px solid rgba(var(--dark-rgb), 0.2);
+	&:hover {
+	  color: rgba(var(--dark-rgb), 0.8) !important;
+	  background-color: $light !important;
+	  border: 1px solid $light;
+	}
+}
+.tag-dark-transparent {
+	background-color: rgba(var(--dark-rgb), 0.2);
+	color: $black;
+	border: 1px solid rgba(var(--dark-rgb), 0.2);
+	&:hover {
+		color: $white !important;
+	  background-color: $dark !important;
+	  border: 1px solid $dark;
+	}
+}
+
+// tag-outline-primary---------
+.tag-outline-primary {
+	color: $primary;
+	background-color: transparent;
+	background-image: none;
+	border-color: $primary !important;
+	border: 1px solid;
+}
+.tag-outline-secondary {
+	color: $secondary;
+	background-color: transparent;
+	background-image: none;
+	border-color: $secondary !important;
+	border: 1px solid;
+}
+.tag-outline-success {
+	color: $success;
+	background-color: transparent;
+	background-image: none;
+	border-color: $success !important;
+	border: 1px solid;
+}
+.tag-outline-warning {
+	color: $warning;
+	background-color: transparent;
+	background-image: none;
+	border-color: $warning !important;
+	border: 1px solid;
+}
+.tag-outline-danger {
+	color: $danger;
+	background-color: transparent;
+	background-image: none;
+	border-color: $danger !important;
+	border: 1px solid;
+}
+.tag-outline-info {
+	color: $info;
+	background-color: transparent;
+	background-image: none;
+	border-color: $info !important;
+	border: 1px solid;
+}
+.tag-outline-light {
+	color: $default-color;
+	background-color: transparent;
+	background-image: none;
+	border-color: #eaeaf9 !important;
+	border: 1px solid;
+}
+.tag-outline-dark {
+	color: $black;
+	background-color: transparent;
+	background-image: none;
+	border-color: $gray-dark !important;
+	border: 1px solid;
+}
+.tags-group .tag-item .selectgroup-input:checked+.tag {
+    background-color: var(--primary-bg-color);
+    border-color: var(--primary-bg-color);
+    color: $fixed-white;
+}
+.tags-group .tag-item .tag {
+    background-color: var(--primary02);
+    border-color: var(--primary02);
+    color: var(--primary-bg-color);
+    cursor: pointer;
+}
+.bootstrap-tagsinput>.tag:not(:last-child) {
+    margin-inline-end: 0.2rem;
+    margin-block-end: 0.2rem;
+}
+.tag.tag-primary {
+    background-color: var(--primary-bg-color);
+    border-color: var(--primary-bg-color);
+    color: $fixed-white !important;
+}
+
+.bootstrap-tagsinput {
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    color: #777ab2;
+    vertical-align: middle;
+    border-radius: 0px;
+    width: 100%;
+    cursor: text;
+}
+.form-group {
+    margin-block-end: 1rem;
+    display: block;
+}
+.outline-tags {
+	.tag-addon {
+		background-color: transparent !important;
+	}
+}
+
+.bootstrap-tagsinput{
+	.tag [data-role="remove"]::after{
+	  content: "\ea00";
+	  font-family: 'feather' !important;
+	  speak-as: normal;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-variant: normal;
+	  text-transform: none;
+	  vertical-align: middle;
+	  margin: 0 -0.25rem;
+	  line-height: 1.5px;
+	  font-size: 13px;
+	}
+  }
+
+  
+.bootstrap-tagsinput {
+	> .tag {
+  
+	  &:not(:last-child) {
+		margin-inline-end: .2rem;
+		margin-block-end: 0.2rem;
+	  }
+	}
+  }
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: $primary !important;
+    border: 1px solid $border !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: $background !important;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 2px;
+}

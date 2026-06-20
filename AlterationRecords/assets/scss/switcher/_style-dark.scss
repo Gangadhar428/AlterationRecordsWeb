@@ -1,0 +1,246 @@
+[data-theme-color="dark"] {
+
+    .app-header,
+    .list-group {
+        --primary-005: rgba(255, 255, 255, 0.05);
+        --primary-01: rgba(255, 255, 255, 0.1);
+    }
+
+    .app-sidebar {
+        box-shadow: none;
+        background-color: $white;
+
+        .app-sidebar__header {
+            background-color: $white;
+        }
+    }
+
+    &[data-vertical-style="hover"],
+    &[data-vertical-style="hover1"] {
+        @media (min-width: 992px) {
+            .app.show-sidenav .app-sidebar__header {
+
+                .desktop-logo {
+                    display: none !important;
+                }
+
+                .mobile-logo {
+                    display: block !important;
+                }
+
+                .mobile-logo-dark {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    &[data-vertical-style="doublemenu"],
+    &[data-vertical-style="doublemenu-tabs"] {
+        @media (min-width: 992px) {
+            .app-sidebar__header {
+
+                .desktop-logo {
+                    display: none !important;
+                }
+
+                .mobile-logo {
+                    display: block !important;
+                }
+
+                .mobile-logo-dark {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    .desktop-logo {
+        display: block;
+    }
+
+    .mobile-logo,
+    .desktop-logo-dark {
+        display: none;
+    }
+
+    .light-layout {
+        display: none !important;
+    }
+
+    .dark-layout {
+        display: flex !important;
+    }
+
+    .side-menu__icon {
+        border-color: #{$border};
+    }
+
+    .landing-page {
+
+        .landing-layout .footer-section .copyright-content {
+            border-block-start: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-logo {
+            .logo-1 {
+                display: none !important;
+            }
+
+            .dark-logo-1 {
+                display: block !important;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .sidebar-mini.sidenav-toggled {
+            .mobile-logo {
+                display: block;
+
+                &.mobile-logo-dark {
+                    display: none;
+                }
+            }
+
+            &.show-sidenav {
+                .desktop-logo {
+                    display: block;
+
+                    &.desktop-logo-dark {
+                        display: none;
+                    }
+                }
+
+                .mobile-logo {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .responsive-logo .main-logo .desktop-logo {
+            display: block;
+
+            &.desktop-logo-dark {
+                display: none;
+            }
+        }
+    }
+
+    .app-sidebar__user {
+        color: #fff;
+    }
+
+    .banner-card {
+        --primary-02: #{$primary-05};
+    }
+
+    .card {
+        --gray-100: rgba(0, 0, 0, 0.03);
+    }
+
+    .ps__rail-y.ps--clicking .ps__thumb-y {
+        background-color: rgba($color: #fff, $alpha: 0.3);
+    }
+
+    .ps .ps__rail-y.ps--clicking {
+        background-color: transparent;
+    }
+
+    .ps .ps__rail-y {
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+    }
+
+    .ps__thumb-y {
+        background-color: transparent;
+    }
+
+    .side-menu__item.active .icon-menu-img {
+        background-color: #{$primary};
+    }
+
+    .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+        color: #fff !important;
+        background: rgba($color: #fff, $alpha: 0.2) !important;
+    }
+
+    .btn-close {
+        background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+    }
+
+    .bg-white {
+        background-color: $white !important;
+    }
+
+    .bg-light {
+        background-color: $black-1 !important;
+    }
+
+    .side-menu__item {
+
+        &.active .side-menu__icon,
+        &:hover .side-menu__icon,
+        &:focus .side-menu__icon {
+            // background-color: #{$primary-07};
+            border-color: #{$border};
+            color: #fff;
+        }
+    }
+
+    .wallet .qr-code {
+        filter: invert(1);
+    }
+
+    .navbar-toggler {
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+    }
+
+    .footer-logo-light {
+        display: inline-block;
+    }
+
+    .footer-logo-dark {
+        display: none;
+    }
+
+    .custom-logo-light {
+        display: block;
+    }
+
+    .custom-logo-dark {
+        display: none;
+    }
+
+    .progress {
+        background-color: #{$black-1};
+    }
+
+    .logo-dark {
+        display: none;
+        margin: 0 auto;
+    }
+    
+    .logo-light {
+        display: block;
+        margin: 0 auto;
+    }
+    .sign-favicon-dark {
+        display: none;
+        margin: 0 auto;
+    }
+    
+    .sign-favicon-light {
+        display: block;
+        margin: 0 auto;
+    }.custom-switch-indicator {
+        background: $fixed-black-2;
+    }
+}

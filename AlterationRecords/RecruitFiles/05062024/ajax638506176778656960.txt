@@ -1,0 +1,139 @@
+ $.ajax({
+        url: "AdmissionList.aspx/GetPatientListWithDate",
+        data: "{'cat':'" + radio + "','ddlvalue':'" + ddlvalue + "','textvalue':'" + details + "','textboxFromdate':'" + textBoxValue + "','isProvisional':'" + isProvisional + "','wardOrRoomOrBed':'" + wardOrRoomOrBed + "','wardOrRoomOrBedID':'" + wardOrRoomOrBedID + "','DischargeTypeID':'" + DischargeType + "','IsFromWardMgmtScreen':'" + IsFromWardMgmtScreen + "'}",
+        dataType: "json",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        success: function (response) {
+            KeepSessionALive();
+            debugger;
+            if ($('#cphClinicareon_hdnPatientID').val() != "" && ($('#cphClinicareon_hdnNavigationFromPage').val() == "'IPVitals'" || $('#cphClinicareon_hdnNavigationFromPage').val() == "'IPRxAdvise'" || $('#cphClinicareon_hdnNavigationFromPage').val() == "'IPLabOrders'" || $('#cphClinicareon_hdnNavigationFromPage').val() == "'IPPatientTransfers'" || $('#cphClinicareon_hdnNavigationFromPage').val() == "'IPVitals'" || $('#cphClinicareon_hdnNavigationFromPage').val() == "'AdmissionAckDetail'")) {
+                $("#divTblPatientList").hide();
+                $("#divTblPatientListForWardMgmt").show();
+                BindPatientListFromNavigationPage(response.d);
+
+                if (patientID != "") {
+                    var hdnPatientRow = document.getElementById("hdnPatientID_TblPatientListWardMgmt_" + patientID);
+                    if (hdnPatientRow != null) {
+                        $("#hdnPatientID_TblPatientListWardMgmt_" + patientID).closest("tr").addClass('highlightRow');
+
+
+                    }
+                    else {
+                        //                        $("#tblPatientListForWardMgmt_paginate.paginate_button").each(function (index, value) {
+                        //                            $(this).click();
+                        //                            hdnPatientRow = document.getElementById("hdnPatientID_TblPatientListWardMgmt_" + patientID);
+                        //                            if (hdnPatientRow != null) {
+                        //                                $("#hdnPatientID_TblPatientListWardMgmt_" + patientID).closest("tr").addClass('highlightRow');
+
+                        //                            }
+                        //                        });
+                        var paginationLen = $("#tblPatientListForWardMgmt_paginate>span>a.paginate_button ").length;
+                        var elementsArr = $("#tblPatientListForWardMgmt_paginate>span>a.paginate_button");
+
+                        for (var i = 0; i < paginationLen; i++) {
+                            elementsArr[i].click();
+                            hdnPatientRow = document.getElementById("hdnPatientID_TblPatientListWardMgmt_" + patientID);
+                            if (hdnPatientRow != null) {
+                                $("#hdnPatientID_TblPatientListWardMgmt_" + patientID).closest("tr").addClass('highlightRow');
+                                break;
+                            }
+                        }
+                    }
+                }
+                filterText();
+                $('#tblPatientListForWardMgmt').css('width', '');
+            }
+            else {
+                StateForPatientLsit();
+                //$('#tblPatientList').dataTable().fnClearTable();
+                /* table = $('#tblPatientList').DataTable({
+                "sDom": '<"datatable-header"Tfl><"datatable-scroll"t><"datatable-footer"ip>',
+                "bDestroy": true,
+                "bJQueryUI": false,
+                "bAutoWidth": false,
+                "sPaginationType": "full_numbers",
+                "bFilter": false,
+                "bStateSave": true,
+                "bLengthChange": false,
+                "oLanguage": {
+                "oPaginate": { "sFirst": "First", "sLast": "Last", "sNext": ">", "sPrevious": "<" }
+                },
+                "aaSorting": [[1, 'asc']],
+                "aoColumnDefs": [{ bSortable: false, aTargets: [0]}],
+                "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                var index = iDisplayIndexFull + 1;
+                $("td:first", nRow).html("<div class='text-left'>" + index + "</div>");
+                return nRow;
+                }             
+                }); */
+                oTablePatientList.clear();
+                oTablePatientList.draw();
+
+                $.each(response.d, function (i, value) {
+                    debugger;
+                    BindData = [];
+                    BindData.push("");
+                    // BindData.push(value.Provisional || value.PatientDeathStatus == "Dead" ? "" : "<div class='text-center'><a id='anchMakeVisit' title='Click to Make a visit' class='fa fa-plus-circle fa-1-5x wysiwyg-color-green' onClick='MakeVisit([\"" + value.PatientUID + "\"]);'></a>&nbsp&nbsp&nbsp<a id='anchOpBilling' class='fa fa-rupee fa-1-5x wysiwyg-color-green' onClick='OPBilling([\"" + value.PatientUID + "\"]);' title='Click to OP Billing' onClick=''></a>&nbsp&nbsp<a id='anchLabOrder' class='fa fa-flask fa-1-5x wysiwyg-color-green' title='Click to Lab Entry' onClick='LabOrder([\"" + value.PatientUID + "\"]);'></a></div>");
+                    BindData.push(GetNameHtml(value)); // id='anchMakeVisit' 
+                    BindData.push(value.GenderDesc);
+                    var str = value.DateofBirth;
+                    var num = parseInt(str.replace(/[^0-9-]/g, ""));
+                    var date = new Date(num);
+                    BindData.push(date.getFullYear() == 3939 || date.getFullYear() == 1 ? "" : GetAge(date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()));
+                    //BindData.push((value.FatherName == null ? "" : value.FatherName) + (value.SpouseName == null ? "" : " / " + value.SpouseName));
+                    BindData.push(value.KithPhone == null ? "" : value.KithPhone);
+                    BindData.push((value.PaymentType == null ? "" : value.PaymentType));
+                    BindData.push(GetFormatedDate(value.AdmissionDate == null ? "" : value.AdmissionDate));
+                    var name = value.DocSalutationDesc == undefined || value.DocSalutationDesc == null ? "" : value.DocSalutationDesc;
+                    name += value.DoctorName == undefined || value.DoctorName == null ? "" : " " + value.DoctorName;
+                    BindData.push(name);
+
+                    if (value.BedID != undefined && value.BedID != null && !isNaN(value.BedID) && value.BedID > 0) { //(value.IsBed == 1) {
+                        BindData.push(value.BedNo);
+                    }
+                    else if (value.RoomID != undefined && value.RoomID != null && !isNaN(value.RoomID) && value.RoomID > 0) { // (value.IsBed == 2) {
+                        BindData.push(value.RoomNo);
+                    }
+                    else {
+                        BindData.push("");
+                    }
+
+                    if (value.WardID != undefined && value.WardID != null && value.WardID > 0) {
+                        //BindData.push(value.WardNo);
+                        BindData.push(value.WardName);
+                    }
+                    else {
+                        BindData.push("");
+                    }
+                    if (value.IsDischarged == 0) {
+                        BindData.push("Current");
+                    }
+                    else {
+                        BindData.push("Discharged");
+                    }
+                    BindData.push("<a class='fa fa-print fa-1-5x text-center' title='Click to Print PatientIDCard' onClick='PrintBarCodesMethod([" + i + ", " + "\"" + value.PatientUID + "\"" + "," + "\"" + value.PatientID + "\"" + "," + "\"" + value.PatientAdmissionID + "\"" + "])'></a>");
+                    BindData.push("<a id='anchPrintRegistrationCopy_" + i + "' class='fa fa-copy fa-1-5x text-center' title='Click to Print Admission Copy' onClick='GetClinicalReports([" + "\"" + value.PatientAdmissionID + "\"" + "," + "\"" + value.PatientID + "\"" + "])'></a>");
+                    // BindData.push("<div class='text-center'><a id='anchPrintBarCode_" + i + "' class='btn btn-primary panelRadius' onclick='GetClinicalReports([" + "\"" + value.PatientAdmissionID + "\"" + "," + "\"" + value.PatientID + "\"" + "])'> Print Admission </a></div>");
+                    BindData.push("<div class='text-center'><a id='anchPrintNewAdmission_" + i + "' class='fa fa-user fa-1-5x' title='Click to Print Patient Details' onclick='GetPatientAdmissioNewReports([" + "\"" + value.PatientAdmissionID + "\"" + "," + "\"" + value.PatientID + "\"" + "])'></a></div>")
+                    BindData.push("<div class='text-center'><a id='anchPrintRegistrationCopy_" + i + "' class='btn btn-primary panelRadius' title='Click to Print Admission Copy' onClick='PrintSticker([" + "\"" + value.PatientAdmissionID + "\"" + "," + "\"" + value.PatientID + "\"" + "])'>IP Label</a><div>");
+                    //BindData.push("<a id='anchPrintRegistrationCopy_" + i + "' class='fa fa-sticky-note' style='font-size:24px' title='Click to Print Admission Copy' onClick='PrintSticker([" + i + ", " + "\"" + value.PatientUID + "\"" + "," + "\"" + value.PatientID + "\"" + "," + "\"" + value.PatientAdmissionID + "\"" + "])'><img src='../images/letter head_icon.png' alt='drug' height='18' width='15'></a>");
+                    // BindData.push(value.Provisional ? "<div class='text-center'><i class='fa fa-check wysiwyg-color-green'></i></div>" : "");
+                    oTablePatientList.row.add(BindData); // table.fnAddData(BindData);
+                });
+                oTablePatientList.on('order.dt search.dt', function () {
+                    oTablePatientList.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                        cell.innerHTML = i + 1;
+                    });
+                }).draw();
+                filterText();
+                $('#tblPatientList').css('width', '');
+
+            }
+
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            HandleError("Patient List - GetPatientListWithDate ", XMLHttpRequest, textStatus, errorThrown)
+        }
+    });

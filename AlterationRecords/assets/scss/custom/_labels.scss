@@ -1,0 +1,29 @@
+label {
+	display: inline-block;
+}
+ul.labels-info li {
+	h4 {
+		color: #5c5c5e;
+		font-size: 13px;
+		padding-inline-start: 15px;
+		padding-inline-end: 15px;
+		padding-block-start: 5px;
+		text-transform: uppercase;
+	}
+	margin: 0;
+	a {
+		border-radius: 0;
+		color: #6c6a8d;
+		&:hover, &:focus {
+			background: none repeat scroll 0 0 #d5d7de;
+			color: #6c6a8d;
+		}
+		i {
+			padding-inline-end: 10px;
+		}
+	}
+}
+.label {
+	display: inline-block;
+	margin-block-end: .5rem;
+}

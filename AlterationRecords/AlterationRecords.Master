@@ -1,0 +1,711 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AlterationRecords.master.cs" Inherits="AlterationRecords.AlterationRecords" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlterationRecords</title>
+    <%--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />--%>
+    <%--<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />--%>
+    <%--<link rel="stylesheet" href="~/AlterationRecords.styles.css" asp-append-version="true" />--%>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/brand/favicon.ico" />
+    <!-- Title -->
+    <!--Bootstrap.min css-->
+    <link id="style" rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
+    <!--Font Awesome-->
+    <link href="assets/plugins/fontawesome-free/css/all.css" rel="stylesheet" />
+    <!-- Dashboard Css -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <%--<link href="~/assets/css/style.css.map" rel="stylesheet" />--%>
+
+    <link href="assets/css/plugins.css" rel="stylesheet" />
+    <%--<link href="~/assets/css/plugins.css.map" rel="stylesheet" />--%>
+    <!---Font icons-->
+    <link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+    <!-- Font-icons css -->
+    <link href="assets/css/icons.css" rel="stylesheet" />
+    <!-- Switcher css -->
+    <link href="assets/switcher/css/switcher.css" rel="stylesheet" type="text/css" media="all" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="sidebar-mini2 app sidebar-mini">
+    <!-- Global Loader-->
+
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div class="page">
+            <div class="page-main">
+                <div>
+                    <!-- Header opened -->
+                    <div class=" app-header sticky ">
+                        <div class="main-container container-fluid d-flex ">
+                            <div class="d-flex header-left">
+                                <div class="responsive-logo">
+                                    <a class="main-logo" href="RolesList.aspx" onclick="return false;">
+                                        <img src="assets/images/brand/logo.png" class="desktop-logo desktop-logo-dark" alt="">
+                                        <img src="assets/images/brand/logo1.png" class="desktop-logo" alt="">
+                                    </a>
+                                </div>
+                                <div class="header-nav-link">
+                                    <a href="javascript:void(0);" data-bs-toggle="sidebar" class="nav-link icon toggle app-sidebar__toggle"><i class="ri-align-left header-icon"></i></a>
+                                </div>
+                                <%--<div class="header-nav-link dropdown d-none d-lg-flex">
+                                    <a href="#" class="d-flex nav-link icon br-0" data-bs-toggle="dropdown">
+                                        <i class="ri-search-line"></i>
+                                    </a>
+                                    <div class="dropdown-menu header-search dropdown-menu-start dropdown-menu-arrow">
+                                        <div class="input-group w-300 px-2 py-1 ">
+                                            <input type="text" class="form-control " placeholder="Search....">
+                                            <div class="input-group-append ">
+                                                <button type="button" class="btn btn-primary ">
+                                                    <i class="ri-search-line header-icon" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>--%>
+                            </div>
+                            <div class="d-flex header-right ms-auto">
+                                <div class="header-nav-link">
+                                    <a href="javascript:void(0);" class="nav-link icon d-lg-none" role="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent-4">
+                                        <i class="ri-more-2-fill"></i>
+                                    </a>
+                                </div>
+                                <div class="responsive-navbar align-items-stretch navbar-expand-lg navbar-dark p-0 mb-0">
+                                    <div class="collapse align-items-stretch navbar-collapse d-flex" id="navbarSupportedContent-4">
+                                        <ul class="nav">
+                                            <!-- full-screen-end-->
+                                            <%--<li class="header-nav-link">
+                                                <a href="#" class="nav-link icon full-screen-link">
+                                                    <i class="ri-fullscreen-exit-line fullscreen-button header-icon"></i>
+                                                </a>
+                                            </li>--%>
+                                            <!-- full-screen-end-->
+
+                                            <!-- header-search-start-->
+                                            <li class="dropdown header-nav-link d-flex d-lg-none">
+                                                <a href="#" class="d-flex nav-link icon br-0" data-bs-toggle="dropdown">
+                                                    <i class="ri-search-line"></i>
+                                                </a>
+                                                <div class="dropdown-menu header-search dropdown-menu-arrow">
+                                                    <div class="input-group px-2 py-1 ">
+                                                        <input type="text" class="form-control " placeholder="Search....">
+                                                        <div class="input-group-append ">
+                                                            <button type="button" class="btn btn-primary ">
+                                                                <i class="ri-search-line header-icon" aria-hidden="true"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- Profile-start-->
+                                        <div class="dropdown header-nav-link">
+                                            <a class="nav-link icon leading-none d-flex" data-bs-toggle="dropdown" href="#">
+                                                <%--<img class="avatar avatar-md brround cover-image" src="assets/images/users/5.jpg">--%>
+                                                <lable class="avatar avatar-md brround cover-image" style="background-color: #4d5875; text-transform: uppercase">
+                                                    <asp:Label runat="server" ID="lblUserFName"></asp:Label></lable>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-arrow p-0">
+                                                <div class="drop-heading py-3 ps-4 pe-4">
+                                                    <div class="text-center">
+                                                        <h5 class="text-dark mb-1">Welcome</h5>
+                                                        <small class="text-muted">
+                                                            <asp:Label runat="server" ID="lblUser"></asp:Label></small>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-divider m-0"></div>
+                                                <a class="dropdown-item" href="ChangePassword.aspx"><i class="dropdown-icon fe fe-unlock"></i>Change Password</a>
+                                                <a class="dropdown-item" href="Logout.aspx"><i class="dropdown-icon fe fe-power"></i>Log Out</a>
+                                            </div>
+                                        </div>
+                                        <!-- Profile-end-->
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Header closed -->
+
+                    <!-- Sidemenu opened-->
+                    <div class="sticky">
+                        <aside class="app-sidebar">
+                            <div class="app-sidebar__header">
+                                <a class="main-logo" href="RolesList.aspx">
+                                    <img src="assets/images/brand/logo.png" class="desktop-logo desktop-logo-dark" alt="">
+                                    <img src="assets/images/brand/eboardsheet-logo.png" class="desktop-logo" alt="">
+                                    <img src="assets/images/brand/eboardsheet-icon.png" class="mobile-logo mobile-logo-dark" alt="">
+                                    <img src="assets/images/brand/eboardsheet-icon.png" class="mobile-logo" alt="">
+                                </a>
+                            </div>
+                            <div class="main-sidemenu">
+                                <div class="slide-left disabled" id="slide-left">
+                                    <svg xmlns="https://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewbox="0 0 24 24">
+                                        <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
+                                    </svg>
+                                </div>
+                                <ul class="side-menu">
+                                    <li class="slide" id="liSettings" runat="server">
+                                        <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);" id="anchSettings" runat="server">
+                                            <span class="side-menu__icon">
+                                                <i class="side-menu__icon si si-settings"></i>
+                                            </span>
+                                            <span class="side-menu__label">Settings</span>
+                                            <i class="angle fa fa-angle-right"></i>
+                                        </a>
+                                        <ul class="slide-menu" id="liSettingsSubmenu" runat="server">
+                                            <li class="panel sidetab-menu">
+
+                                                <div class="panel-body tabs-menu-body p-0 border-0">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="side1">
+                                                            <ul class="sidemenu-list">
+                                                                <li class="side-menu__label1"><a href="javascript:void(0)">Settings</a></li>
+                                                                <li><a class="slide-item" id="liRoles" runat="server" href="RolesList.aspx"><span>Roles</span></a></li>
+                                                                <li><a class="slide-item" id="liUsers" runat="server" href="UsersList.aspx"><span>Users</span></a></li>
+                                                                <li><a class="slide-item" id="liSchools" runat="server" href="SchoolsList.aspx"><span>Schools</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="slide" id="liFiles" runat="server">
+                                        <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);" id="anchFiles" runat="server">
+                                            <span class="side-menu__icon"><i class="side-menu__icon fa fa-folder-o"></i></span>
+                                            <span class="side-menu__label">Files</span><i class="angle fa fa-angle-right"></i>
+                                        </a>
+                                        <ul class="slide-menu" id="liFilesSubmenu" runat="server">
+                                            <li class="panel sidetab-menu">
+
+                                                <div class="panel-body tabs-menu-body p-0 border-0">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="side9">
+                                                            <ul class="sidemenu-list">
+                                                                <li class="side-menu__label1"><a href="javascript:void(0)">Files</a></li>
+                                                                <li><a href="Upload.aspx" class="slide-item" id="liUpload" runat="server">Upload New File</a></li>
+                                                                <li><a href="ListOfFiles.aspx" class="slide-item" id="liViewList" runat="server">View File List</a></li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="slide" id="liPrice" runat="server" style="display: none;">
+                                        <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)" id="anchPrice" runat="server">
+                                            <span class="side-menu__icon"><i class="side-menu__icon ti-money"></i></span>
+                                            <span class="side-menu__label">Price Definition</span><i class="angle fa fa-angle-right"></i>
+                                        </a>
+                                        <ul class="slide-menu" id="liPriceSubmenu" runat="server">
+                                            <li class="panel sidetab-menu">
+
+                                                <div class="panel-body tabs-menu-body p-0 border-0">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="side33">
+                                                            <ul class="sidemenu-list">
+                                                                <li class="side-menu__label1"><a href="javascript:void(0)">Price Definition</a></li>
+                                                                <li><a class="slide-item" href="PriceDefinitionScreen.aspx" id="liDefinePrice" runat="server">Price Definition</a></li>
+
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="slide" id="liSildeReport" runat="server">
+                                        <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);" id="anchReport" runat="server">
+                                            <span class="side-menu__icon"><i class="side-menu__icon fa fa-file-text-o"></i></span>
+                                            <span class="side-menu__label">Reports</span><i class="angle fa fa-angle-right"></i>
+                                        </a>
+                                        <ul class="slide-menu" id="liReportSubmenu" runat="server">
+                                            <li class="panel sidetab-menu">
+
+                                                <div class="panel-body tabs-menu-body p-0 border-0">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="side13">
+                                                            <ul class="sidemenu-list">
+                                                                <li class="side-menu__label1"><a href="javascript:void(0)">Reports</a></li>
+                                                                <li><a href="CrystalSchoolReport.aspx" class="slide-item" id="liSchoolsReport" runat="server">School Report</a></li>
+                                                                <li><a href="CrystalPlatoonReport.aspx" class="slide-item" id="liCrystalPlatoon" runat="server">Signature Report Dress</a></li>
+                                                                <li><a href="CrystalcammiesReport.aspx" class="slide-item" id="liCrystalCammies" runat="server">Signature Report Cammies</a></li>
+                                                                <li><a href="CrystalcammiesReportTurnIn.aspx" class="slide-item" id="liCrystalCammiesTurnIn" runat="server">Sig. Report Cammies Turn In</a></li>
+                                                                <li><a href="CrystalSignatureReportBRCW.aspx" class="slide-item" id="liCrystalBRCW" runat="server">Signature Report Women</a></li>
+                                                                <li><a href="CrystalMainInvoiceReport.aspx" class="slide-item" id="liReport" runat="server">Alterations Per Fitting Report</a></li>
+                                                                <li><a href="CrystalInvoiceSummaryReportNew.aspx" class="slide-item" id="liInvoiceSummaryNew" runat="server">Invoice Summary Report</a></li>
+                                                                <li><a href="CrystalDMSummaryReport.aspx" class="slide-item" id="liDMSummary" runat="server">DM Summary Report</a></li>
+                                                                <li><a href="CrystalDMFulfillmentSummaryReport.aspx" class="slide-item" id="liDMFullfillmentSummary" runat="server">DM Fulfillment Summary Report</a></li>
+                                                                <li><a href="AccEMR.aspx" class="slide-item" id="liAccEMR" runat="server">Acc/EMR Report</a></li>
+                                                                <li><a href="AccEMRAuth.aspx" class="slide-item" id="liAccEMRAuth" runat="server">Acc/EMR Auth. Report</a></li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li class="slide" id="liSildeinstallation" runat="server">
+                                        <a class="side-menu__item" data-bs-toggle="slide" href="TabletClientInstallation.aspx" id="anchinstallation" runat="server">
+                                            <span class="side-menu__icon"><i class="side-menu__icon icon-user"></i></span>
+                                            <span class="side-menu__label">Tablet Client Installation</span>
+                                        </a>
+                                        <%--<ul class="slide-menu" id="liinstallationSubmenu" runat="server">
+                                            <li class="panel sidetab-menu">
+
+                                                <div class="panel-body tabs-menu-body p-0 border-0">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="side14">
+                                                            <ul class="sidemenu-list">
+                                                                <li class="side-menu__label1"><a href="javascript:void(0)">Tablet Client Installation</a></li>
+                                                                <li><a href="TabletClientInstallation.aspx" class="slide-item" id="liinstallation" runat="server">Tablet Client Installation</a></li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>--%>
+                                    </li>
+
+
+                                </ul>
+                                <div class="slide-right" id="slide-right">
+                                    <svg xmlns="https://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewbox="0 0 24 24">
+                                        <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- Sidemenu closed -->
+                </div>
+                <div class="main-content app-content">
+                    <div class="main-container container-fluid">
+                    </div>
+
+
+
+
+
+                    <!--Modal-chat-start--->
+                    <%--<div class="modal fade stickey" id="chatModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="card modal-content">
+                                <!-- msg_card_header-start -->
+                                <div class="card-header d-flex px-4  py-4 d-flex bg-primary text-white">
+                                    <div class="">
+                                        <a href="#" class="avatar avatar-md brround cover-image" data-bs-image-src="assets/images/users/1.jpg"><span class="avatar-status bg-green"></span></a>
+                                    </div>
+                                    <div class="ms-3">
+                                        <a href="#" class="fs-15 ps-1 fw-semibold text-white">Rickey Smith</a>
+                                        <div class="fs-11 ps-1 ">Active</div>
+                                    </div>
+                                    <div class=" small text-end text-muted ms-auto d-flex">
+                                        <a href="#" class="avatar avatar-ms brround bg-dark-transparent text-white" data-bs-toggle="modal" data-bs-target="#voice-Modal"><i class="ri-phone-fill "></i></a>
+                                        <a href="#" class="avatar avatar-ms brround bg-dark-transparent text-white mx-2" data-bs-toggle="modal" data-bs-target="#video-Modal"><i class="ri-live-fill video-icon align-middle"></i></a>
+                                        <a href="#" class="avatar avatar-ms  brround bg-dark-transparent text-white" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"></i><i class="ri-more-fill"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end" role="menu">
+                                            <li><a href="#"><i class="ri-user-3-line me-2 align-middle"></i>View Profile</a></li>
+                                            <li><a href="#"><i class="ri-user-add-line  me-2 align-middle"></i>Add friends</a></li>
+                                            <li><a href="#"><i class="ri-group-line me-2 align-middle"></i>Add to group</a></li>
+                                            <li><a href="#"><i class="ri-close-circle-line me-2 align-middle"></i>Clear chat</a></li>
+                                            <li><a href="#"><i class="ri-settings-2-line me-2 align-middle"></i>Settings</a></li>
+                                        </ul>
+                                        <a href="#" class="avatar avatar-ms brround bg-dark-transparent text-white mx-2"><i class="ri-close-fill" data-bs-dismiss="modal"></i></a>
+                                    </div>
+                                </div>
+                                <!-- msg_card_header-end-->
+                                <!-- msg_card_body-start-->
+                                <div class="card-body px-4 modal-card-body-chat py-0 mt-0">
+                                    <div class="text-center py-4">
+                                        <span class="badge bg-default  text-dark text-dark badge-pill px-2 py-1">Yesterday</span>
+                                    </div>
+                                    <div class="">
+                                        <div class="my-2">
+                                            <div class="d-flex">
+                                                <div class="me-2">
+                                                    <img src="assets/images/users/1.jpg" class="avatar avatar-md brround">
+                                                    <div class="text-muted   text-center fs-11 mt-1 fw-bold op-8">11:20 am</div>
+                                                </div>
+                                                <div class=" ">
+                                                    <div class="bg-primary-transparent chat1 px-3 py-2">
+                                                        <div class=" "><span class="fs-13 text-primary">Hello! How are things today?  <i class="ri-emotion-happy-fill text-yellow fs-18 align-middle"></i></span></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="py-2">
+                                            <div class="d-flex justify-content-end">
+                                                <div class="">
+                                                    <div class="chat2 px-3 py-2 bg-primary">
+                                                        <div class="">i'm doing well, how about you?</div>
+                                                    </div>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <img src="assets/images/users/6.jpg" class="avatar avatar-md brround ms-1">
+                                                    <div class="text-muted  fw-bold fs-11 mt-1 fw-bold op-8">11:21 am</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="my-2">
+                                            <div class="d-flex">
+                                                <div class="me-2">
+                                                    <img src="assets/images/users/1.jpg" class="avatar avatar-md brround">
+                                                    <div class="text-muted  text-end fs-11 mt-1 fw-bold op-8">11:22 am</div>
+                                                </div>
+                                                <div class=" ">
+                                                    <div class="bg-primary-transparent chat1 px-3 py-2">
+                                                        <div class=" "><span class="fs-13 text-primary">Pretty good. Just listening the music</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="py-2">
+                                            <div class="d-flex justify-content-end">
+                                                <div class="">
+                                                    <div class="chat2 px-3 py-2 bg-primary">
+                                                        <div class="">What kind of music do you like?</div>
+                                                    </div>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <img src="assets/images/users/6.jpg" class="avatar avatar-md brround ms-1">
+                                                    <div class="text-muted  fw-bold fs-11 mt-1 fw-bold op-8">11:23 am</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="my-2">
+                                            <div class="d-flex">
+                                                <div class="me-2">
+                                                    <img src="assets/images/users/1.jpg" class="avatar avatar-md brround">
+                                                    <div class="text-muted  text-end fs-11 mt-1 fw-bold op-8">11:24 am</div>
+                                                </div>
+                                                <div class=" ">
+                                                    <div class="bg-primary-transparent chat1 px-3 py-2">
+                                                        <div class=" "><span class="fs-13 text-primary">i love country, i've met taylor swift before too, you?</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="py-2">
+                                            <div class="d-flex justify-content-end">
+                                                <div class="">
+                                                    <div class="chat2 px-3 py-2 bg-primary">
+                                                        <div class="">I have never meet tylor swift.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <img src="assets/images/users/6.jpg" class="avatar avatar-md brround ms-1">
+                                                    <div class="text-muted  fs-11 mt-1 fw-bold op-8">11:25 am</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="my-2">
+                                            <div class="d-flex">
+                                                <div class="me-2">
+                                                    <img src="assets/images/users/1.jpg" class="avatar avatar-md brround">
+                                                    <div class="text-muted  text-end fs-11 mt-1 fw-bold op-8">11:26 am</div>
+                                                </div>
+                                                <div class=" ">
+                                                    <div class="bg-primary-transparent chat1 px-3 py-2">
+                                                        <div class=" "><span class="fs-13 text-primary">sorry to say I have some work, i want to leave right now</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="py-2">
+                                            <div class="d-flex justify-content-end">
+                                                <div class="">
+                                                    <div class="chat2 px-3 py-2 bg-primary">
+                                                        <div class="">its ok. we will meet some other day, bye</div>
+                                                    </div>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <img src="assets/images/users/6.jpg" class="avatar avatar-md brround ms-1">
+                                                    <div class="text-muted  fs-11 mt-1 fw-bold op-8">11:27 am</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center my-4">
+                                            <span class="badge bg-default text-dark badge-pill px-2 py-1">Today</span>
+                                        </div>
+                                        <div class="my-2">
+                                            <div class="d-flex">
+                                                <div class="me-2">
+                                                    <img src="assets/images/users/1.jpg" class="avatar avatar-md brround">
+                                                    <div class="text-muted  text-end fs-11 mt-1 fw-bold op-8">08:10 am</div>
+                                                </div>
+                                                <div class=" ">
+                                                    <div class="bg-primary-transparent chat1 px-3 py-2">
+                                                        <div class=" "><span class="fs-13 text-primary">hi ! how are you</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="py-2">
+                                            <div class="d-flex justify-content-end">
+                                                <div class="">
+                                                    <div class="chat2 px-3 py-2 bg-primary">
+                                                        <div class="">hlo, i am doing good what about you?</div>
+                                                    </div>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <img src="assets/images/users/6.jpg" class="avatar avatar-md brround ms-1">
+                                                    <div class="text-muted  fs-11 mt-1 fw-bold op-8">08:11 am</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="my-2">
+                                            <div class="d-flex">
+                                                <div class="me-2">
+                                                    <img src="assets/images/users/1.jpg" class="avatar avatar-md brround">
+                                                    <div class="text-muted  text-end fs-11 mt-1 fw-bold op-8">08:12 am</div>
+                                                </div>
+                                                <div class=" ">
+                                                    <div class="bg-primary-transparent chat1 px-3 py-2">
+                                                        <div class=" "><span class="fs-13 text-primary">i am fine too. Soo where are you working right now?</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="py-2">
+                                            <div class="d-flex justify-content-end">
+                                                <div class="">
+                                                    <div class="chat2 px-3 py-2 bg-primary">
+                                                        <div class="">I am working at the bosch company</div>
+                                                    </div>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <img src="assets/images/users/6.jpg" class="avatar avatar-md brround ms-1">
+                                                    <div class="text-muted  fs-11 mt-1 fw-bold op-8">08:13 am</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="my-2">
+                                            <div class="d-flex">
+                                                <div class="me-2">
+                                                    <img src="assets/images/users/1.jpg" class="avatar avatar-md brround">
+                                                    <div class="text-muted  text-end fs-11 mt-1 fw-bold op-8">08:14 am</div>
+                                                </div>
+                                                <div class=" ">
+                                                    <div class="bg-primary-transparent chat1 px-3 py-2">
+                                                        <div class=" "><span class="fs-13 text-primary">Thats really nice to hear</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- msg_card_body end -->
+                                <!-- card-footer -->
+                                <div class="card-footer px-4 ">
+                                    <div class="d-flex">
+                                        <div class=" d-flex my-auto">
+                                            <a href="javascript:void(0)" class="input-form-emoji-icon"><i
+                                                class="ri-emotion-happy-line fs-21 p-2 ps-2 pe-0"></i>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex my-auto w-100p">
+                                            <input type="text" class="  input-form form-control p-0 ps-2 m-0"
+                                                placeholder="Type Something here...">
+                                            <a href="javascript:void(0)" class="input-form-attach-icon"><i
+                                                class="ri-attachment-2 fs-20 ps-1 p-2"></i>
+                                            </a>
+                                            <span class="avatar bg-primary-transparent rounded-circle ms-2 my-auto">
+                                                <a href="javascript:void(0)">
+                                                    <i class="ri-send-plane-2-fill fs-20 p-2 avatar text-primary"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card-footer end -->
+                            </div>
+                        </div>
+                    </div>--%>
+                    <!--Modal-chat-end-->
+                    <!--Voice Modal -->
+                    <%--<div id="voice-Modal" class="Modal-video-call modal fade">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="text-end"><i class="ri-close-line fs-20 close-icon" data-bs-dismiss="modal"></i></div>
+                                    <div class="  mx-auto text-center ms-4 me-4 mt-2 pb-2">
+                                        <h5 class="">Spaner Voice call</h5>
+                                        <h4 class="mb-1 fw-semibold">Henry</h4>
+                                        <div class="text-muted blink"><span class="text-blink">Ringing...</span></div>
+                                        <img src="assets/images/users/9.jpg" class="rounded-circle user-call-img mt-4 mb-3"
+                                            alt="img">
+
+                                        <div class="mt-2">
+                                            <div class=" d-flex justify-content-center">
+                                                <a href="#" class="avatar avatar-md bg-primary rounded-circle ms-3">
+                                                    <i class="ri-volume-up-fill text-white"></i>
+                                                </a>
+                                                <a href="#" class="avatar avatar-md bg-danger rounded-circle ms-4 me-4" data-bs-dismiss="modal">
+                                                    <i class="ri-phone-fill text-white"></i>
+                                                </a>
+                                                <a href="#" class="avatar avatar-md bg-primary rounded-circle me-3">
+                                                    <i class="ri-mic-off-fill text-white"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- modal-body -->
+                            </div>
+                        </div>
+                        <!-- modal-dialog -->
+                    </div>--%>
+                    <!-- modal-dialog -->
+                    <!--Video Modal -->
+                    <%--<div id="video-Modal" class="Modal-video-call modal fade">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class=" mx-auto text-center ms-4 me-4 mt-2 pb-2">
+                                        <h5 class="">Spaner Video call</h5>
+                                        <div class="text-end  Position-relative"><i class="ri-close-line fs-20 close-icon" data-bs-dismiss="modal"></i></div>
+                                        <h4 class="mb-1 fw-semibold">Henry</h4>
+                                        <div class="text-muted blink"><span class="text-blink">Ringing...</span></div>
+                                        <img src="assets/images/users/9.jpg" class="rounded-circle user-call-img mt-4 mb-3"
+                                            alt="img">
+                                        <div class="mt-2">
+                                            <div class="d-flex justify-content-center">
+                                                <a href="#" class="avatar avatar-md bg-primary rounded-circle ms-3">
+                                                    <i class="ri-volume-up-fill text-white"></i>
+                                                </a>
+                                                <a href="#" class="avatar avatar-md bg-danger rounded-circle ms-4 me-4" data-bs-dismiss="modal">
+                                                    <i class="ri-phone-fill text-white"></i>
+                                                </a>
+                                                <a href="#" class="avatar avatar-md bg-primary rounded-circle me-3">
+                                                    <i class="ri-mic-off-fill text-white"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- modal-body -->
+                            </div>
+                        </div>
+                        <!-- modal-dialog -->
+                    </div>--%>
+                    <!-- modal -->
+                    <div id="global-loader">
+                        <img src="assets/images/svgs/loader.svg" alt="loader" />
+                    </div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <div id="main_panel_container" runat="server" class="right">
+                        <asp:ContentPlaceHolder ID="SonabendContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+
+                <!--footer-->
+                <footer class="footer">
+                    <div class="container">
+                        <div class="row align-items-center flex-row-reverse">
+                            <div class="col-md-12 col-sm-12 text-center">
+                                <%--© eboardsheet <span id="year"></span> <a href="#">Spaner</a>. Designed with <span class="ri ri-heart-fill text-danger"></span> by <a href="https://spruko.com/">Spruko</a> All rights reserved.--%>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End Footer-->
+            </div>
+        </div>
+    </form>
+    <!-- Back to top -->
+    <a href="#top" id="back-to-top"><i class="fas fa-angle-up "></i></a>
+
+    <!-- JQuery min js -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!--Circle-Progress js -->
+    <script src="assets/js/vendors/circle-progress.min.js"></script>
+
+    <!--Bootstrap.min js-->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- p-scroll bar js-->
+    <%--<script src="assets/plugins/p-scroll/p-scroll.js"></script>
+    <script src="assets/plugins/p-scroll/p-scroll-1.js"></script>--%>
+
+    <!-- Side menu js -->
+    <script src="assets/js/sidemenu.js"></script>
+
+
+    <!-- sticky js-->
+    <script src="assets/js/sticky.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="assets/plugins/sidebar/sidebar.js"></script>
+
+    <!-- custom js -->
+    <%--<script src="assets/js/custom.js"></script>--%>
+
+    <!-- custom-switcher js -->
+    <script src="assets/js/custom-switcher.js"></script>
+
+    <!-- Switcher js -->
+    <script src="assets/switcher/js/switcher.js"></script>
+    <!-- Internal Data tables -->
+    <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.bootstrap5.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.buttons.min.js"></script>
+    <script src="assets/plugins/datatable/js/buttons.bootstrap5.min.js"></script>
+    <script src="assets/plugins/datatable/js/jszip.min.js"></script>
+    <script src="assets/plugins/datatable/pdfmake/pdfmake.min.js"></script>
+    <script src="assets/plugins/datatable/pdfmake/vfs_fonts.js"></script>
+    <script src="assets/plugins/datatable/js/buttons.html5.min.js"></script>
+    <script src="assets/plugins/datatable/js/buttons.print.min.js"></script>
+    <script src="assets/plugins/datatable/js/buttons.colVis.min.js"></script>
+    <script src="assets/plugins/datatable/dataTables.responsive.min.js"></script>
+    <script src="assets/plugins/datatable/responsive.bootstrap5.min.js"></script>
+    <%--<script src="assets/js/table-data.js"></script>--%>
+
+    <!-- INTERNAL Select2 js -->
+    <script src="assets/plugins/select2/js/select2.full.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$(window).on("load", function (e) {
+            $("#global-loader").fadeOut("slow");
+            //});
+        });
+    </script>
+</body>
+</html>

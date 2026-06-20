@@ -1,0 +1,301 @@
+/*-----22. Badges-----*/
+
+.btn .badge {
+	position: relative;
+	inset-block-start: -1px;
+}
+.badge-primary {
+	color: $fixed-white;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+.badge-success {
+	color: $fixed-white;
+	background-color: $success;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+			background-color: #1f8f5f;
+		}
+	}
+}
+.badge-info {
+	color: $fixed-white;
+	background-color: $info;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+			background-color: #1594ef;
+		}
+	}
+}
+.badge-warning {
+	color: $fixed-white;
+	background-color: $warning;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+			background-color: #c29d0b;
+		}
+	}
+}
+.badge-danger {
+	color: $fixed-white;
+	background-color: $danger;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+			background-color: #a11918;
+		}
+	}
+}
+.badge-light {
+	color: #495057;
+	background-color: #eaeaf9;
+	&[href] {
+		&:hover, &:focus {
+			color: #495057;
+			text-decoration: none;
+			background-color: #dae0e5;
+		}
+	}
+}
+.badge-dark {
+	color: $fixed-white;
+	background-color: $gray-dark;
+	&[href] {
+		&:hover, &:focus {
+			color: $white;
+			text-decoration: none;
+			background-color: #1d2124;
+		}
+	}
+}
+.badge {
+    // display: inline-block;
+    // padding: 3px 5px 4px;
+    // line-height: 1.1;
+    // text-align: center;
+    // white-space: nowrap;
+    // vertical-align: baseline;
+    // border-radius: 3px;
+    // font-size: 0.75em;
+    font-weight: 500;
+}
+.badge-pill {
+	padding-inline-end: .6em;
+	padding-inline-start: .6em;
+	border-radius: 10rem;
+}
+.badgetext {
+	float: right;
+}
+.badge-default {
+	background: $background;
+	color: $default-color;
+}
+.badge-secondary {
+    color: $fixed-white;
+}
+
+// ---------------------------------------------
+
+.badge.badge-orange{
+	color: #{$fixed-white} ;
+   background-color: #{$orange};
+}
+
+.badge.badge-cyan{
+color: #{$fixed-white} ;
+   background-color: #{$purple};
+}
+
+.badge.bg-white {
+   color: #{$default-color} !important;
+}
+
+.btn-outline-primary:hover .bg-primary {
+   background: #{$fixed-white} !important;
+   color: #{$primary};
+}
+
+.btn-outline-success:hover .bg-success {
+   background: #{$fixed-white} !important;
+   color: #{$success};
+}
+
+.btn-outline-secondary:hover .bg-secondary {
+   background: #{$fixed-white} !important;
+   color: #{$secondary};
+}	
+
+.btn-outline-info:hover .bg-info {
+   background: #{$fixed-white} !important;
+   color: #{$info};
+}
+
+.btn-outline-warning:hover .bg-warning {
+   background: #{$fixed-white} !important;
+   color: #{$warning};
+}
+.btn-outline-danger:hover .bg-danger {
+	background: #{$fixed-white} !important;
+	color: #{$danger};
+ }
+ .btn-outline-dark:hover .bg-dark {
+	background: #{$fixed-white} !important;
+	color: #{$dark};
+ }
+ .btn-outline-light:hover .bg-light {
+	background: #{$fixed-white} !important;
+	color: #{$dark};
+ }
+
+.btn .badge, .sp-container button .badge {
+    inset-block-start: -1px;
+}
+.btn .badge {
+    position: relative;
+}
+.badge-top {
+    inset-inline-start: 100%;
+    transform: translate(-50%, -50%);
+    position: absolute !important;
+    border: 2px solid var(--border);
+}
+
+
+.badge-primary-transparent {
+	background-color: $primary-02;
+	color: $primary;
+	border: 1px solid $primary-02;
+}
+  
+.badge-secondary-transparent {
+	background-color: rgba(var(--secondary-bg-color-rgb), 0.2);
+	color: $secondary;
+	border: 1px solid rgba(var(--secondary-bg-color-rgb), 0.2);
+}
+  
+.badge-success-transparent {
+	background-color: rgba(var(--success-bg-color-rgb), 0.2);
+	color: $success;
+	border: 1px solid rgba(var(--success-bg-color-rgb), 0.2);
+  }
+  
+  .badge-teal-transparent {
+	background-color: rgba($teal,0.15) !important;
+	color: #{$teal};
+  }
+  
+  .badge-green-transparent {
+	background-color: rgba($green,0.15) !important;
+	color: #{$green};
+  }
+  
+  .badge-warning-transparent {
+	background-color: rgba(var(--warning-bg-color-rgb), 0.2);
+	color: $warning;
+	border: 1px solid rgba(var(--warning-bg-color-rgb), 0.2);
+  }
+  
+  .badge-danger-transparent {
+	background-color: rgba(var(--danger-bg-color-rgb), 0.2);
+	color: $danger;
+	border: 1px solid rgba(var(--danger-bg-color-rgb), 0.2);
+  }
+  
+  .badge-purple-transparent {
+	color: #{$purple};
+	background-color: rgba($purple,0.15);
+  }
+  
+  .badge-info-transparent {
+	background-color: rgba(var(--info-bg-color-rgb), 0.2);
+	color: $info;
+	border: 1px solid rgba(var(--info-bg-color-rgb), 0.2);
+  }
+  
+  .badge-pink-transparent {
+	color: #{$pink};
+	background-color: rgba($pink,0.15);
+  }
+  
+  .badge-light-transparent {
+	background-color: rgba(var(--light-rgb), 0.2);
+	color: $dark;
+	border: 1px solid rgba(var(--dark-rgb), 0.2);
+  }
+  
+  .badge-dark-transparent {
+	background-color: rgba(var(--dark-rgb), 0.2);
+	color: $black;
+	border: 1px solid rgba(var(--dark-rgb), 0.2);
+  }
+
+.badge-outline-primary {
+	color: $primary;
+	background-color: transparent;
+	background-image: none;
+	border-color: $primary !important;
+	border: 1px solid;
+}
+.badge-outline-secondary {
+	color: $secondary;
+	background-color: transparent;
+	background-image: none;
+	border-color: $secondary !important;
+	border: 1px solid;
+}
+.badge-outline-success {
+	color: $success;
+	background-color: transparent;
+	background-image: none;
+	border-color: $success !important;
+	border: 1px solid;
+}
+.badge-outline-warning {
+	color: $warning;
+	background-color: transparent;
+	background-image: none;
+	border-color: $warning !important;
+	border: 1px solid;
+}
+.badge-outline-danger {
+	color: $danger;
+	background-color: transparent;
+	background-image: none;
+	border-color: $danger !important;
+	border: 1px solid;
+}
+.badge-outline-info {
+	color: $info;
+	background-color: transparent;
+	background-image: none;
+	border-color: $info !important;
+	border: 1px solid;
+}
+.badge-outline-dark {
+	color: $dark;
+	background-color: transparent;
+	background-image: none;
+	border-color: $dark !important;
+	border: 1px solid;
+}
+.badge-outline-light {
+	color: $default-color;
+	background-color: transparent;
+	background-image: none;
+	border-color: $light !important;
+	border: 1px solid;
+}
+  
+  

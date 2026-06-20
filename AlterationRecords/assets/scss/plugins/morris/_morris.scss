@@ -1,0 +1,33 @@
+.morris-hover {
+	position: absolute;
+	z-index: 1000;
+
+	&.morris-default-style {
+		border-radius: 10px;
+		padding: 6px;
+		color: #666;
+		background: $fixed-white-8;
+		border: solid 2px $border;
+		font-family: sans-serif;
+		font-size: 12px;
+		text-align: center;
+
+		.morris-hover-row-label {
+			font-weight: bold;
+			margin: 0.25em 0;
+		}
+
+		.morris-hover-point {
+			white-space: nowrap;
+			margin: 0.1em 0;
+		}
+	}
+}
+
+.morris-donut-wrapper-demo {
+	svg {
+		path {
+			stroke: $border !important;
+		}
+	}
+}

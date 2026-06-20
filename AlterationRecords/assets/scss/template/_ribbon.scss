@@ -1,0 +1,106 @@
+/*--- Ribbon ---*/
+
+.arrow-ribbon {
+	color: #FFF;
+	padding: 2px 8px;
+	position: absolute;
+	inset-block-start: 10px;
+	inset-inline-start: 0px;
+	z-index: 999;
+	font-size: 18px;
+	&.bg-purple:before {
+		position: absolute;
+		inset-inline-end: 0;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		content: "";
+		inset-inline-end: -15px;
+		border-block-start: 15px solid transparent;
+		border-inline-start: 15px solid $purple;
+		border-block-end: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-danger:before {
+		position: absolute;
+		inset-inline-end: 0;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		content: "";
+		inset-inline-end: -15px;
+		border-block-start: 15px solid transparent;
+		border-inline-start: 15px solid $danger;
+		border-block-end: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-primary:before {
+		position: absolute;
+		inset-inline-end: 0;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		content: "";
+		inset-inline-end: -15px;
+		border-block-start: 15px solid transparent;
+		border-block-end: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-secondary:before {
+		position: absolute;
+		inset-inline-end: 0;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		content: "";
+		inset-inline-end: -15px;
+		border-block-start: 15px solid transparent;
+		border-inline-start: 15px solid #f3f7fd;
+		border-block-end: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-success:before {
+		position: absolute;
+		inset-inline-end: 0;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		content: "";
+		inset-inline-end: -15px;
+		border-block-start: 15px solid transparent;
+		border-inline-start: 15px solid $success;
+		border-block-end: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-info:before {
+		position: absolute;
+		inset-inline-end: 0;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		content: "";
+		inset-inline-end: -15px;
+		border-block-start: 15px solid transparent;
+		border-inline-start: 15px solid $info;
+		border-block-end: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-warning:before {
+		position: absolute;
+		inset-inline-end: 0;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		content: "";
+		inset-inline-end: -15px;
+		border-block-start: 15px solid transparent;
+		border-inline-start: 15px solid $warning;
+		border-block-end: 15px solid transparent;
+		width: 0;
+	}
+	&.bg-pink:before {
+		position: absolute;
+		inset-inline-end: 0;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		content: "";
+		inset-inline-end: -15px;
+		border-block-start: 15px solid transparent;
+		border-inline-start: 15px solid $pink;
+		border-block-end: 15px solid transparent;
+		width: 0;
+	}
+}

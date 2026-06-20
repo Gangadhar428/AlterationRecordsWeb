@@ -1,0 +1,27 @@
+[data-header-style="color"] {
+    .app-header {
+        --header-bg:        #{$primary};
+        --border:         rgba(255, 255, 255, 0.1);
+        --primary-005:    rgba(255, 255, 255, 0.1);
+        --primary-01:     rgba(255, 255, 255, 0.1);
+        --border:         #ebebeb;
+    }
+    .responsive-logo .main-logo .desktop-logo {
+        display: block;
+
+        &.desktop-logo-dark {
+            display: none;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .responsive-navbar .navbar-collapse {
+            background-color: #{$primary};
+        }
+    }
+
+    .app-header .nav-link.icon {
+        --color: rgba(255, 255, 255, 0.8);
+        --primary-bg-color: #ffffff;
+    }
+}

@@ -1,0 +1,26 @@
+[data-header-style="light"] {
+    .app-header {
+        --header-bg: #ffffff;
+        --border: #ebebeb;
+        --color: #3c4858;
+        --white: #fff;
+        --gray-700: #4d5875;
+        --primary-005: #{rgba(var(--primary-rgb),0.05)};
+        --primary-01: #{rgb(var(--primary-rgb), 0.1)};
+        
+    }.app-header .icon i {
+        color: rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .responsive-logo .main-logo .desktop-logo {
+        display: none;
+
+        &.desktop-logo-dark {
+            display: block;
+        }
+    }
+
+    .app-header .dropdown-menu {
+        border: 1px solid rgba(255, 255, 255, 0.1)
+    }
+}

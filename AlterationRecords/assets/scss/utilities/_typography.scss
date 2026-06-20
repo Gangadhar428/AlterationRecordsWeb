@@ -1,0 +1,135 @@
+textarea {
+	overflow: auto;
+}
+/*----- 16. Typography ------*/
+
+.heading-primary, .heading-secondary {
+	color: $fixed-white;
+	padding: 5px;
+}
+.heading-inverse {
+	background-color: #040807;
+	color: $fixed-white;
+	padding: 5px;
+}
+.heading-success {
+	background-color: $success;
+	color: $fixed-white;
+	padding: 5px;
+}
+.heading-info {
+	background-color: $info;
+	color: $fixed-white;
+	padding: 5px;
+}
+.heading-warning {
+	background-color: $warning;
+	color: $fixed-white;
+	padding: 5px;
+}
+.heading-danger {
+	background-color: $danger;
+	color: $fixed-white;
+	padding: 5px;
+}
+.text-default {
+	color: $default-color;
+}
+.fw-600 {
+	font-weight: 600 !important;
+}
+.text-light {
+	color: $light !important;
+}
+.text-dark {
+	color: $default-color !important;
+}
+.text-muted {
+	color: $muted !important;
+}
+.text-wrap {
+	> {
+		:first-child {
+			margin-block-start: 0;
+		}
+		:last-child {
+			margin-block-end: 0;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			margin-block-start: 1em;
+		}
+	}
+}
+.text-inherit {
+	color: inherit !important;
+}
+.text-blue {
+	color: $blue !important;
+}
+.text-indigo {
+	color: $indigo !important;
+}
+.text-purple {
+	color: $purple !important;
+}
+.text-pink {
+	color: $pink !important;
+}
+.text-red {
+	color: $danger !important;
+}
+.text-orange {
+	color: $orange !important;
+}
+.text-yellow {
+	color: $warning !important;
+}
+.text-green {
+	color: $success !important;
+}
+.text-teal {
+	color: $teal !important;
+}
+.text-cyan {
+	color: $cyan !important;
+}
+
+.text-gray {
+	color: $gray !important;
+}
+.text-gray-dark {
+	color: $gray-dark !important;
+}
+.text-gray-600 {
+   color: $gray-600;
+}
+.text-azure {
+	color: $info !important;
+}
+.text-lime {
+	color: $lime !important;
+}
+.text-gray-500 {
+	color: $gray-500 !important;
+}
+.text-gray-400 {
+	color: $gray-400 !important;
+}
+.fs-50 {
+	font-size: 50px;
+}
+.pd-s-40 {
+    padding-inline-start: 40px;
+}
+.lh-9 {
+    line-height: 0.9;
+}
+.text-italic {
+    font-style: italic;
+}
+.fs-56 {
+	font-size: 56px;
+}
+.fs-46 {
+	font-size: 46px;
+}

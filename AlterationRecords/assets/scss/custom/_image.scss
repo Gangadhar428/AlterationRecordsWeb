@@ -1,0 +1,36 @@
+img {
+  vertical-align: middle;
+  border-style: none;
+  max-width: 100%;
+}
+
+.img-thumbnail .caption {
+  padding: 15px;
+}
+
+
+.wrapper.image-group .img-xs.rounded-circle {
+  margin-inline-end: -5px;
+}
+
+@media (min-width: 576px) {
+    .w-sm-200 {
+      width: 200px;
+  }
+}
+
+
+@media (min-width: 576px) {
+    .fs-sm-16 {
+      font-size: 16px;
+    }
+}
+.a-0 {
+  inset-block-start: 0px;
+  inset-inline-end: 0px;
+  inset-block-end: 0px;
+  inset-inline-start: 0px;
+}
+.w-fit-content {
+  width: fit-content !important;
+}
